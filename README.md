@@ -1,37 +1,35 @@
-1. Identificação básica
-1.1 Título do experimento
-Dê um nome claro e descritivo que permita entender rapidamente o foco do experimento (o que está sendo comparado, avaliado ou medido), evitando siglas internas pouco conhecidas.
+# Relação entre Senioridade de Desenvolvedores e Desempenho em Programação Competitiva
 
 1.2 ID / código
-Informe o identificador único usado pela organização (código de projeto, número de estudo, etc.), que facilitará o rastreio e o vínculo com outros artefatos.
+816373
 
 1.3 Versão do documento e histórico de revisão
-Registre a versão atual (por exemplo, v1.0, v1.1) e mantenha um curto histórico das principais alterações, para saber o que mudou entre versões.
+v1.0
 
 1.4 Datas (criação, última atualização)
-Anote quando o plano foi criado e quando foi atualizado pela última vez, para ter clareza sobre a atualidade das informações.
+21/11/2025 - 21/11/2025
 
 1.5 Autores (nome, área, contato)
-Liste quem participou da elaboração do plano, com área de atuação e forma de contato, para dúvidas e alinhamentos futuros.
+Pedro Henrique Pires Rodrigues, Engenharia de Software, pedrohenriquepr08@gmail.com
 
 1.6 Responsável principal (PI / dono do experimento)
-Indique a pessoa accountable pelas decisões do experimento (científicas e/ou de negócio), normalmente o “dono” do estudo.
+Pedro Henrique Pires Rodrigues
 
 1.7 Projeto / produto / iniciativa relacionada
-Descreva a qual produto, módulo, projeto ou iniciativa estratégica este experimento está conectado, facilitando o contexto.
+Atividade dada em sala de aula na matéria de Medição da Engenharia de Software
 
 2. Contexto e problema
 2.1 Descrição do problema / oportunidade
-Explique de forma objetiva qual problema se busca resolver ou qual oportunidade está sendo explorada, incluindo sinais ou sintomas observados.
+Apesar de desenvolvedores experientes (sêniores) possuírem maior vivência prática, não está claro se essa senioridade se traduz, necessariamente, em melhor desempenho em problemas típicos de programação competitiva, que exigem forte domínio de algoritmos, estruturas de dados e raciocínio sob pressão. Ainda sim, em grandes empresas como Google, Microsoft ou Meta, no proessso de contratação dos funcionarios, se faz parte do teste uma prova de lógica de programação envolvendo problemas do mesmo gênero.
 
 2.2 Contexto organizacional e técnico
-Descreva o ambiente onde o experimento ocorrerá: tipo de empresa, equipe, domínio, tecnologias, processo de desenvolvimento e ferramentas relevantes.
+O experimento deve ocorrer em ambiente controlado, em uma sala fechada com acesso a computadores mas sem acesso a internet. Onde o grupo de desenvolvedores de diferentes senioridades (Junior, Pleno e Senior) devem responder uma prova formada por questões de programação competitiva. 
 
 2.3 Trabalhos e evidências prévias (internos e externos)
-Liste experimentos, estudos, análises ou dados anteriores que já tratam do tema, tanto dentro da organização quanto na literatura externa.
+Levantamentos preliminares podem indicar variabilidade entre desenvolvedores de mesmo nível quanto ao conhecimento algorítmico. Além disso, observações de líderes técnicos sugerem que experiência profissional não garante proficiência em problemas de natureza algorítmica.
 
 2.4 Referencial teórico e empírico essencial
-Resuma os conceitos, teorias, modelos e resultados empíricos mais importantes que fundamentam o desenho do experimento e suas hipóteses.
+Esse referencial fundamenta a hipótese de que a correlação entre senioridade e desempenho em programação competitiva pode ser fraca ou moderada, e que fatores como prática específica podem ter maior influência.
 
 3. Objetivos e questões (Goal / Question / Metric)
 3.1 Objetivo geral (Goal template)
