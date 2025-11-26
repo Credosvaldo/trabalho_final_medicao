@@ -1,104 +1,73 @@
 <div class="description user_content enhanced" data-resource-type="assignment.body" data-resource-id="1253544">
 
+
+
+
+
 <h1 id="planodeexperimentoscopingeplanejamento"><span style="color: #0e68b3;"><strong>Plano de Experimento – Scoping e Planejamento</strong></span></h1>
 <h2 id="1identificaobsica">1. Identificação básica</h2>
-<h3 id="11ttulodoexperimento">1.1 Relação entre Senioridade de Desenvolvedores e Desempenho em problemas de Programação Competitiva</h3>
+<h3 id="11ttulodoexperimento">1.1 Título do experimento</h3>
+<p>Dê um nome claro e descritivo que permita entender rapidamente o foco do experimento (o que está sendo comparado, avaliado ou medido), evitando siglas internas pouco conhecidas.</p>
 <h3 id="12idcdigo">1.2 ID / código</h3>
-<p>816373</p>
+<p>Informe o identificador único usado pela organização (código de projeto, número de estudo, etc.), que facilitará o rastreio e o vínculo com outros artefatos.</p>
 <h3 id="13versododocumentoehistricodereviso">1.3 Versão do documento e histórico de revisão</h3>
-<p>2.0</p>
+<p>Registre a versão atual (por exemplo, v1.0, v1.1) e mantenha um curto histórico das principais alterações, para saber o que mudou entre versões.</p>
 <h3 id="14datascriaoltimaatualizao">1.4 Datas (criação, última atualização)</h3>
-<p>21/11/2025 - 23/11/2025</p>
+<p>Anote quando o plano foi criado e quando foi atualizado pela última vez, para ter clareza sobre a atualidade das informações.</p>
 <h3 id="15autoresnomereacontato">1.5 Autores (nome, área, contato)</h3>
-<p>Pedro Henrique Pires Rodrigues, Engenharia de Software, pedrohenriquepr08@gmail.com</p>
+<p>Liste quem participou da elaboração do plano, com área de atuação e forma de contato, para dúvidas e alinhamentos futuros.</p>
 <h3 id="16responsvelprincipalpidonodoexperimento">1.6 Responsável principal (PI / dono do experimento)</h3>
-<p>Pedro Henrique Pires Rodrigues</p>
+<p>Indique a pessoa accountable pelas decisões do experimento (científicas e/ou de negócio), normalmente o “dono” do estudo.</p>
 <h3 id="17projetoprodutoiniciativarelacionada">1.7 Projeto / produto / iniciativa relacionada</h3>
-<p>Atividade dada em sala de aula na matéria de Medição da Engenharia de Software.</p>
+<p>Descreva a qual produto, módulo, projeto ou iniciativa estratégica este experimento está conectado, facilitando o contexto.</p>
 <hr>
 <h2 id="2contextoeproblema">2. Contexto e problema</h2>
 <h3 id="21descriodoproblemaoportunidade">2.1 Descrição do problema / oportunidade</h3>
-<p>Apesar de desenvolvedores experientes (sêniores) possuírem maior vivência prática, não está claro se essa senioridade se traduz, necessariamente, em melhor desempenho em problemas típicos de programação competitiva, que exigem forte domínio de algoritmos, estruturas de dados e raciocínio sob pressão. Ainda sim, em grandes empresas como Google, Microsoft ou Meta, no proessso de contratação dos funcionarios, se faz parte do teste uma prova de lógica de programação envolvendo problemas do mesmo gênero.</p>
+<p>Explique de forma objetiva qual problema se busca resolver ou qual oportunidade está sendo explorada, incluindo sinais ou sintomas observados.</p>
 <h3 id="22contextoorganizacionaletcnico">2.2 Contexto organizacional e técnico</h3>
-<p>O experimento deve ocorrer em ambiente controlado, em uma sala fechada com acesso a computadores mas sem acesso a internet. Onde o grupo de desenvolvedores de diferentes senioridades (Junior, Pleno e Senior) devem responder uma prova formada por questões de programação competitiva.</p>
+<p>Descreva o ambiente onde o experimento ocorrerá: tipo de empresa, equipe, domínio, tecnologias, processo de desenvolvimento e ferramentas relevantes.</p>
 <h3 id="23trabalhoseevidnciasprviasinternoseexternos">2.3 Trabalhos e evidências prévias (internos e externos)</h3>
-<p>Levantamentos preliminares podem indicar variabilidade entre desenvolvedores de mesmo nível quanto ao conhecimento algorítmico. Além disso, observações de líderes técnicos sugerem que experiência profissional não garante proficiência em problemas de natureza algorítmica.</p>
+<p>Liste experimentos, estudos, análises ou dados anteriores que já tratam do tema, tanto dentro da organização quanto na literatura externa.</p>
 <h3 id="24referencialtericoeempricoessencial">2.4 Referencial teórico e empírico essencial</h3>
-<p>Esse referencial fundamenta a hipótese de que a correlação entre senioridade e desempenho em programação competitiva pode ser fraca ou moderada, e que fatores como prática específica podem ter maior influência.</p>
+<p>Resuma os conceitos, teorias, modelos e resultados empíricos mais importantes que fundamentam o desenho do experimento e suas hipóteses.</p>
 <hr>
 <h2 id="3objetivosequestesgoalquestionmetric">3. Objetivos e questões (Goal / Question / Metric)</h2>
 <h3 id="31objetivogeralgoaltemplate">3.1 Objetivo geral (Goal template)</h3>
-<p>Compreender qual a relação entre a senioridade de um desenvolvedor
-e sua habilidade com programação competitiva, e como 
-isso influencia seu trabalho.</p>
-<h3 id="32objetivosespecficos">3.2 GQM</h3>
-
-| **Objetivo Específico** | **Perguntas** | **Métricas** |
-|-------------------------|---------------|--------------|
-| **1 - Avaliar a relação entre senioridade e desempenho em problemas de programação competitiva** | Quanto maior a senioridade mais questões serão resolvidas? | - Número de questões resolvidas <br> - Senioridade do desenvolvedor <br> - Porcentagem de questões resolvidas <br> - Nível de dificuldade das questões resolvidas |
-| | Quanto maior a senioridade, menos tempo a resolução das questões leva? | - Tempo médio por questão resolvida <br> - Tempo médio por nível de dificuldade <br> - Senioridade do desenvolvedor |
-| | Quanto maior a senioridade, melhor a qualidade da resolução? | - Complexidade algorítmica da solução (Big O) <br> - Senioridade do desenvolvedor |
-| **2 - Medir como a proficiência em programação competitiva impacta a atuação profissional** | Desenvolvedores com melhor desempenho em programação competitiva tendem a ter melhor performance em tarefas profissionais? | - Tempo médio para completar tarefas profissionais <br> - Eficiência na entrega (tarefas concluídas / tarefas atribuídas) <br> - Nível de desempenho em programação competitiva |
-| | A proficiência em algoritmos e estruturas de dados melhora a capacidade de resolver problemas no trabalho? | - Número de bugs complexos resolvidos por mês <br> - Tempo médio para identificar causas raízes (root cause) <br> - Avaliação de proficiência em algoritmos e ED |
-| | Desenvolvedores proficientes em programação competitiva apresentam maior autonomia técnica no ambiente de trabalho? | - Quantidade de tarefas resolvidas sem ajuda externa <br> - Nível de senioridade percebida pela equipe <br> - Rating em plataformas de programação competitiva |
-| **3 - Avaliar, na opinião dos desenvolvedores, se há relevância no conhecimento de algoritmos e estruturas de dados** | Os desenvolvedores consideram algoritmos e ED importantes para o trabalho diário? | - Percentual de respostas positivas em questionário <br> - Tempo de experiência do desenvolvedor |
-| | O conhecimento de algoritmos e ED é percebido como um diferencial em entrevistas e promoções? | - Frequência com que o tema aparece em entrevistas <br> - Percepção de impacto nas promoções (escala Likert) |
-| | Os desenvolvedores sentem que algoritmos e ED melhoram sua confiança técnica? | - Nível de autoconfiança técnica (escala Likert) <br> - Tempo de estudo semanal em algoritmos e ED |
-| **4 - Analisar como o engajamento em práticas de programação competitiva influencia o desenvolvimento contínuo de habilidades técnicas** | O engajamento frequente em competições melhora a velocidade de raciocínio lógico? | - Tempo médio para resolver desafios ao longo dos meses <br> - Frequência mensal de participação |
-| | A prática contínua aumenta a variedade de técnicas e algoritmos dominados? | - Número de novas técnicas aprendidas por período <br> - Quantidade de categorias de problemas resolvidos |
-| | O engajamento constante melhora a capacidade de aprender novas tecnologias? | - Tempo médio para aprender uma nova ferramenta/linguagem <br> - Número de novas tecnologias adotadas por ano |
-
-
-<h3 id="34mtricasassociadasgqm">3.3 Métricas</h3>
-
-| **Métrica** | **Descrição da Métrica** | **Unidade** |
-|-------------|---------------------------|--------------|
-| Número de questões resolvidas | Quantidade total de problemas de programação competitiva que o desenvolvedor resolveu | contagem |
-| Senioridade do desenvolvedor | Nível profissional do desenvolvedor (júnior, pleno, sênior etc.) | categoria |
-| Porcentagem de questões resolvidas | Proporção de questões resolvidas em relação às tentadas | porcentagem (%) |
-| Nível de dificuldade das questões resolvidas | Média ou distribuição dos níveis de dificuldade (fácil/médio/difícil) resolvidos | categoria / escala |
-| Tempo médio por questão resolvida | Tempo médio gasto para resolver cada problema | minutos ou horas |
-| Tempo médio por nível de dificuldade | Tempo médio gasto considerando o nível de dificuldade do problema | minutos ou horas |
-| Complexidade algorítmica (Big O) | Classificação da qualidade da solução em termos de eficiência assintótica | notação Big O |
-| Rating / ranking em programação competitiva | Pontuação, nível ou classificação do desenvolvedor em plataformas como Codeforces, LeetCode etc. | pontos / rating |
-| Tempo médio para completar tarefas profissionais | Duração média para concluir tarefas atribuídas no trabalho | horas ou dias |
-| Eficiência na entrega | Proporção entre tarefas concluídas x atribuídas | razão / porcentagem |
-| Número de bugs complexos resolvidos | Quantidade de defeitos de alta complexidade resolvidos no contexto profissional | contagem |
-| Tempo para identificar causa raiz | Média de tempo para encontrar a causa fundamental de problemas complexos | minutos ou horas |
-| Qualidade da solução no trabalho | Avaliação da eficiência, clareza e robustez das soluções profissionais | escala (1–5 ou 1–10) |
-| Frequência de prática em programação competitiva | Número de sessões de prática realizadas por período | sessões / semana ou mês |
-| Número de submissões mensais | Quantidade de submissões de código feitas em plataformas competitivas | contagem / mês |
-| Evolução de desempenho ao longo do tempo | Variação positiva ou negativa do desempenho em competições | pontos / variação (%) |
-
-
+<p>Preencha o objetivo geral usando um template claro (por exemplo, GQM), deixando explícito o que será analisado, com qual propósito, sob qual perspectiva e em qual contexto.</p>
+<h3 id="32objetivosespecficos">3.2 Objetivos específicos</h3>
+<p>Decomponha o objetivo geral em metas mais focadas (O1, O2, etc.), que descrevam resultados concretos de aprendizado ou decisão que o experimento deve gerar.</p>
+<h3 id="33questesdepesquisadenegcio">3.3 Questões de pesquisa / de negócio</h3>
+<p>Formule perguntas claras que o experimento deverá responder (Q1, Q2, etc.), em linguagem que faça sentido para os stakeholders técnicos e de negócio.</p>
+<h3 id="34mtricasassociadasgqm">3.4 Métricas associadas (GQM)</h3>
+<p>Associe a cada questão as métricas que serão usadas para respondê-la, com nome, definição, unidade e fonte dos dados, garantindo alinhamento entre G, Q e M.</p>
 <hr>
 <h2 id="4escopoecontextodoexperimento">4. Escopo e contexto do experimento</h2>
 <h3 id="41escopofuncionaldeprocessoincludoeexcludo">4.1 Escopo funcional / de processo (incluído e excluído)</h3>
-<p>O estudo se trata de um experimento com um grupo de desenvolvedores categorizados em Junior, Pleno e Senior com base no cargo de contratação em que estão atualmente. Seguida de uma pesquisa com os desenvolvedores a fim de coletar o resto dos dados da pesquisa. Para isso sera selecionado um total de dez questões do LeetCode igualmente divididas em dificuldade. O estudo não conta com nenhuma pesquisa direcionada diretamente a opinião das empresas em que esses desenvolvedores trabalham, nem mesmo pretende medir diretamente a habilidade de cada desenvolvedor em estruturas de dados ou algoritimos especificos.</p>
-<h3 id="42contextodoestudotipodeorganizaoprojetoexperincia">4.2 Contexto do estudo</h3>
-<p>O Experimento sera conduzido em ambiente fechado com vasto tempo limite, e a pesquisa sera feita por meio de entrevistas com cada desenvolvedor participante do experimento individualmente. Além disso é necessário que todos os participantes sejam desenvolvedores já inceridos no mercado de trabalho e que tenham uma clara colocação na empresa a respeito da senioridade..</p>
+<p>Explique claramente o que será coberto (atividades, artefatos, equipes, módulos) e o que ficará fora do experimento, para evitar interpretações divergentes.</p>
+<h3 id="42contextodoestudotipodeorganizaoprojetoexperincia">4.2 Contexto do estudo (tipo de organização, projeto, experiência)</h3>
+<p>Caracterize o contexto em que o estudo ocorrerá: tipo e tamanho de organização, tipo de projeto, criticidade e perfil de experiência dos participantes.</p>
 <h3 id="43premissas">4.3 Premissas</h3>
-<p>Para que o experimento seja conduzido idealmente é necessário que os desenvolvedores sejam colocados em uma sala com computadores individuais para cada um deles que não tenham acesso a internet, mas que já tenham as questões preselecionados com um programa que fara a correção ainda no tempo de prova para que possam conferir seu algoritimo.</p>
+<p>Liste as suposições consideradas verdadeiras para o plano funcionar (por exemplo, disponibilidade de ambiente, estabilidade do sistema), mesmo que não possam ser garantidas.</p>
 <h3 id="44restries">4.4 Restrições</h3>
-<p>É necessário que o ambiente sejá apropriado de forma a evitar o uso de "cola", além disso o experimento deve ocorrer cedo de maneira a promover o máximo de tempo possível para que os participantes possam realizar o teste com o tempo que precisarem. </p>
+<p>Registre limitações práticas como tempo, orçamento, ferramentas, acessos ou regras organizacionais que impõem limites ao desenho.</p>
 <h3 id="45limitaesprevistas">4.5 Limitações previstas</h3>
-<p>Deve se haver cuidado na selação das questões para que elas não sejam todas focadas em um unico contexto de desenvolvimento a fim de não proporcionar vantagem a nehum desenvolvedor. Além disso deve se ter cuidado com o número de participantes do experimento a fim de que não seja pequeno demais a ponto de comprometer a veracidade dos resultados.</p>
+<p>Explique fatores que podem prejudicar a generalização dos resultados (validez externa), como contexto muito específico ou amostra pouco representativa.</p>
 <hr>
 <h2 id="5stakeholderseimpactoesperado">5. Stakeholders e impacto esperado</h2>
 <h3 id="51stakeholdersprincipais">5.1 Stakeholders principais</h3>
-<p>Empresas de TI em geral que ultilizam de testes programação competitiva para avaliar a competencia do candidato. Desenvolvedores em busca de vagas no mercado. Organizadores de competições (OBI, SBC, Kaggle) de programação.</p>
+<p>Liste os grupos ou papéis que têm interesse ou serão impactados pelo experimento (por exemplo, devs, QA, produto, gestores, clientes internos).</p>
 <h3 id="52interesseseexpectativasdosstakeholders">5.2 Interesses e expectativas dos stakeholders</h3>
-<p>Ainda que de formas diferentes os resultados desse experimento promove informações relevantes para se reflitir a respeito do quão importante é o conhecimento em code challenges. O que interfere no fato de se fazer ultil ou justo o uso desses tests para contratação de funcionarios ou se o estudo desses topícos é totalmente a parte da experiencia de mercado sendo necessário o estudo individual ou mesmo inútil esse conhecimento.</p>
+<p>Descreva o que cada grupo espera obter do experimento (insights, evidências, validação de decisão, mitigação de risco, etc.).</p>
 <h3 id="53impactospotenciaisnoprocessoproduto">5.3 Impactos potenciais no processo / produto</h3>
-<p>Os resultados podem afetar a decisão de empresas entre manter questões de code challenges como parte do processo seletivo, abandonar essa partica ou memso adota-la (para empresas que ainda não seguem). E para os desenvolvedores pode até mesmo dispertar a curiosidade e o interesse no estudo desse topico ou mesmo a desmotivação a frente a tal tema</p>
+<p>Antecipe como a execução do experimento pode afetar prazos, qualidade, carga de trabalho ou o próprio produto durante e após o estudo.</p>
 <hr>
 <h2 id="6riscosdealtonvelpremissasecritriosdesucesso">6. Riscos de alto nível, premissas e critérios de sucesso</h2>
 <h3 id="61riscosdealtonvelnegciotcnicosetc">6.1 Riscos de alto nível (negócio, técnicos, etc.)</h3>
-<p>Falta de sujeitos dispostos a participar do experimento, ou falta de maquinario necessário para sua realização.</p>
+<p>Identifique os principais riscos para negócio e tecnologia (atrasos, falhas de ambiente, indisponibilidade de dados, etc.) em nível macro.</p>
 <h3 id="62critriosdesucessoglobaisgonogo">6.2 Critérios de sucesso globais (go / no-go)</h3>
-<p>Um total de pelo menos trinta desenvolvedores distribuidos ao menso quase igualmente entre as categorias de senioridade e um conjunto de maquinas igual ao número de desenvolvedores disponiveis por tempo abil a realização do experimento.</p>
+<p>Defina as condições sob as quais o experimento será considerado útil e viável, inclusive critérios que sustentem uma decisão de seguir ou não com mudanças.</p>
 <h3 id="63critriosdeparadaantecipadaprexecuo">6.3 Critérios de parada antecipada (pré-execução)</h3>
-<p>Falta de pessoal ou estrutura para realização do experimento.</p>
+<p>Descreva situações em que o experimento deve ser adiado ou cancelado antes de começar (falta de recursos críticos, reprovação ética, mudanças de contexto).</p>
 <hr>
 <h2 id="7modeloconceitualehipteses">7. Modelo conceitual e hipóteses</h2>
 <h3 id="71modeloconceitualdoexperimento">7.1 Modelo conceitual do experimento</h3>
