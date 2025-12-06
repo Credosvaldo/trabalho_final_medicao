@@ -2910,15 +2910,568 @@ Semana 0:  Início do experimento principal
 <hr>
 <h2 id="13avaliaodevalidadeameaasemitigao">13. Avaliação de validade (ameaças e mitigação)</h2>
 <h3 id="131validadedeconcluso">13.1 Validade de conclusão</h3>
-<p>Liste ameaças que podem comprometer a robustez das conclusões estatísticas (baixo poder, violação de suposições, erros de medida) e como pretende mitigá-las.</p>
+
+<p>Validade de conclusão refere-se à correção das inferências sobre a existência e magnitude de relações entre variáveis.</p>
+
+<p><strong>AMEAÇA 1: Poder estatístico inadequado</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Amostra pequena (n=30, ~10 por grupo) pode não detectar efeitos pequenos ou médios</li>
+<li><strong>Impacto:</strong> Erro Tipo II - concluir que não há diferença quando ela existe</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Cálculo a priori de tamanho amostral (poder=0,80 para f=0,25)</li>
+    <li>Usar medidas repetidas (10 questões) aumenta poder efetivo</li>
+    <li>Focar em efeitos médios a grandes, que são detectáveis com n=30</li>
+    <li>Reportar tamanhos de efeito e intervalos de confiança, não apenas p-valores</li>
+    <li>Ser transparente sobre poder limitado para efeitos pequenos</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 2: Violação de pressupostos estatísticos</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Dados podem não atender pressupostos de normalidade, homogeneidade de variâncias, independência</li>
+<li><strong>Impacto:</strong> Taxas de erro Tipo I infladas ou defladas</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Testar pressupostos formalmente (Shapiro-Wilk, Levene, Durbin-Watson)</li>
+    <li>Usar testes não-paramétricos se pressupostos violados (Kruskal-Wallis, Mann-Whitney)</li>
+    <li>Considerar transformações de dados (log, raiz quadrada) quando apropriado</li>
+    <li>Bootstrap para intervalos de confiança quando distribuições incertas</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 3: Baixa confiabilidade das medidas</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Variabilidade aleatória na medição de desempenho ou classificação de complexidade</li>
+<li><strong>Impacto:</strong> Atenua relações verdadeiras, reduz poder</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Usar sistema automatizado para correção (elimina variabilidade humana)</li>
+    <li>Múltiplas questões por participante (consistência interna)</li>
+    <li>Casos de teste extensivos para cada questão (reduz falsos positivos/negativos)</li>
+    <li>Dois avaliadores para classificação de complexidade algorítmica (acordo inter-raters)</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 4: Erro Tipo I por múltiplas comparações</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Múltiplos testes aumentam chance de falsos positivos</li>
+<li><strong>Impacto:</strong> Taxa de erro Tipo I inflada acima de α=0,05</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Pré-especificar hipóteses primárias vs. exploratórias</li>
+    <li>Aplicar correções (Bonferroni, Tukey HSD) para comparações post-hoc</li>
+    <li>Distinguir claramente análises confirmatórias de exploratórias no relato</li>
+    <li>Focar interpretação em tamanhos de efeito, não apenas significância</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 5: Variabilidade na implementação do experimento</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Se múltiplas sessões, variações no procedimento ou ambiente</li>
+<li><strong>Impacto:</strong> Variância de erro aumentada, poder reduzido</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Protocolo rigorosamente padronizado com script para facilitador</li>
+    <li>Mesmo ambiente físico para todas as sessões</li>
+    <li>Checklist pré-sessão para garantir consistência</li>
+    <li>Incluir "sessão" como fator de bloqueio em análises se necessário</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 6: Heterogeneidade de variância entre grupos</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Grupos de senioridade podem ter dispersões diferentes (ex: juniores mais heterogêneos)</li>
+<li><strong>Impacto:</strong> Testes paramétricos comprometidos</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Teste de Levene para detectar heterogeneidade</li>
+    <li>Usar correções (Welch's ANOVA, Games-Howell post-hoc)</li>
+    <li>Testes não-paramétricos como alternativa robusta</li>
+  </ul>
+</li>
+</ul>
 <h3 id="132validadeinterna">13.2 Validade interna</h3>
-<p>Identifique ameaças relacionadas a causas alternativas para os efeitos observados (history, maturation, selection, etc.) e explique suas estratégias de controle.</p>
+
+<p>Validade interna refere-se à confiança de que a relação observada entre VI e VD é causal, não espúria.</p>
+
+<p><strong>AMEAÇA 1: Viés de seleção (Selection)</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Grupos de senioridade podem diferir sistematicamente em características além da senioridade</li>
+<li><strong>Exemplos:</strong> Seniores podem ter mais educação formal, experiência específica em algoritmos, autosseleção de perfil</li>
+<li><strong>Impacto:</strong> Diferenças atribuídas à senioridade podem ser devidas a outros fatores</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Coletar covariáveis (anos de experiência, formação, experiência prévia com programação competitiva)</li>
+    <li>Usar ANCOVA para controlar estatisticamente</li>
+    <li>Análises estratificadas por experiência prévia</li>
+    <li>Balancear grupos em características conhecidas durante recrutamento</li>
+    <li><strong>Limitação reconhecida:</strong> Não é experimento verdadeiro - senioridade não randomizada</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 2: História (History)</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Eventos externos entre sessões podem afetar participantes</li>
+<li><strong>Exemplos:</strong> Participante viu questões similares online, mudanças em políticas de contratação</li>
+<li><strong>Impacto:</strong> Confusão temporal com efeitos de interesse</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Todas as sessões em período curto (mesma semana se possível)</li>
+    <li>Perguntar sobre exposição recente a questões similares (critério de exclusão)</li>
+    <li>Não divulgar questões específicas antes do experimento</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 3: Maturação (Maturation)</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Participantes aprendem ao longo do experimento (efeito de prática)</li>
+<li><strong>Impacto:</strong> Desempenho em questões posteriores pode ser melhor por aprendizagem, não habilidade</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Ordem fixa de questões para todos (efeito de aprendizagem afeta todos igualmente)</li>
+    <li>Modelar "posição da questão" como preditor em análises de medidas repetidas</li>
+    <li>Verificar se padrão temporal difere entre grupos de senioridade</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 4: Instrumentação</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Mudanças no instrumento de medição ou avaliadores</li>
+<li><strong>Exemplos:</strong> Sistema de correção inconsistente, facilitador muda comportamento</li>
+<li><strong>Impacto:</strong> Variabilidade artificial nos dados</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Sistema automatizado de correção (consistência perfeita)</li>
+    <li>Casos de teste validados em piloto</li>
+    <li>Script padronizado para facilitador</li>
+    <li>Mesmo avaliador para análise de complexidade algorítmica (cego para senioridade)</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 5: Mortalidade diferencial (Attrition)</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Taxa de desistência diferente entre grupos de senioridade</li>
+<li><strong>Exemplo:</strong> Juniores desistem mais por sentirem-se frustrados</li>
+<li><strong>Impacto:</strong> Amostra final não representativa, viés de sobrevivência</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Incentivar conclusão (reforço de que não é avaliação)</li>
+    <li>Registrar e reportar taxa de attrition por grupo</li>
+    <li>Comparar características de completadores vs. desistentes</li>
+    <li>Análise de sensibilidade (worst-case: assumir desistentes teriam desempenho zero)</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 6: Efeitos de regressão à média</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Participantes com desempenho extremo inicial tendem a se aproximar da média em medidas subsequentes</li>
+<li><strong>Impacto:</strong> Confusão com efeitos reais de aprendizagem ou fadiga</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Menos relevante pois não há pré/pós-teste</li>
+    <li>Estar ciente ao interpretar desempenho em questões sequenciais</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 7: Difusão de tratamento (Treatment diffusion)</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Participantes se comunicam entre si durante experimento</li>
+<li><strong>Impacto:</strong> Contaminação de dados, vantagem injusta</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Proibição explícita de comunicação</li>
+    <li>Monitoramento do facilitador</li>
+    <li>Arranjo físico com distanciamento entre estações</li>
+    <li>Sistema detecta código idêntico entre participantes</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 8: Efeitos de fadiga e motivação</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Desempenho deteriora por cansaço, grupos podem ter resistências diferentes</li>
+<li><strong>Impacto:</strong> Confusão com efeitos de senioridade</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Tempo generoso (3 horas) para evitar pressão excessiva</li>
+    <li>Coffee break disponível</li>
+    <li>Medir "estado físico/mental" em questionário pré como covariável</li>
+    <li>Analisar padrão temporal de desempenho para detectar fadiga</li>
+  </ul>
+</li>
+</ul>
 <h3 id="133validadedeconstructo">13.3 Validade de constructo</h3>
-<p>Refleta se as medidas escolhidas realmente representam os conceitos de interesse e descreva como você reduzirá ambiguidades de interpretação.</p>
+
+<p>Validade de constructo refere-se à adequação das operacionalizações dos conceitos teóricos.</p>
+
+<p><strong>AMEAÇA 1: Operacionalização inadequada de "Senioridade"</strong></p>
+<ul>
+<li><strong>Questão:</strong> Cargo formal (Júnior/Pleno/Sênior) realmente captura expertise em programação?</li>
+<li><strong>Problema:</strong> Senioridade pode refletir tempo de empresa, habilidades interpessoais, não apenas técnicas</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Coletar anos de experiência como medida contínua adicional</li>
+    <li>Análises de sensibilidade usando anos de experiência em vez de cargo</li>
+    <li>Reconhecer limitação: cargo é proxy imperfeito de habilidade técnica</li>
+    <li>Discussão sobre variabilidade dentro de cada nível</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 2: "Desempenho em programação competitiva" ≠ "Habilidade profissional"</strong></p>
+<ul>
+<li><strong>Questão:</strong> Questões de LeetCode representam desafios do trabalho real?</li>
+<li><strong>Problema:</strong> Programação competitiva enfatiza algoritmos puros; trabalho real envolve design, manutenção, colaboração</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Ser explícito sobre escopo limitado: "desempenho em problemas algorítmicos", não "habilidade geral"</li>
+    <li>Questões qualitativas sobre percepção de relevância para trabalho</li>
+    <li>Discussão sobre validade ecológica limitada</li>
+    <li>Não generalizar achados para competência profissional ampla</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 3: Viés mono-operação (Mono-operation bias)</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Usar apenas questões de programação competitiva sub-representa constructo de interesse</li>
+<li><strong>Impacto:</strong> Conclusões restritas a tipo específico de problema</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Diversificar questões (arrays, grafos, DP, strings, etc.)</li>
+    <li>Três níveis de dificuldade</li>
+    <li>Reconhecer que outros tipos de problemas podem produzir resultados diferentes</li>
+    <li>Sugerir replicações com tipos variados de tarefas</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 4: Viés mono-método (Mono-method bias)</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Apenas medidas quantitativas de desempenho</li>
+<li><strong>Impacto:</strong> Perde nuances de estratégias, processos cognitivos</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Adicionar dados qualitativos (entrevistas, observações)</li>
+    <li>Triangulação de métodos</li>
+    <li>Análise de complexidade algorítmica (aspecto qualitativo do desempenho)</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 5: Expectativas do experimentador (Experimenter expectancies)</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Facilitador pode inadvertidamente tratar grupos diferentemente ou influenciar codificação</li>
+<li><strong>Impacto:</strong> Profecias autorrealizáveis</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Protocolo estritamente padronizado</li>
+    <li>Avaliador de complexidade cego para senioridade dos participantes</li>
+    <li>Correção automatizada (elimina viés humano)</li>
+    <li><strong>Análise por único codificador (limitação de recursos):</strong> Mitigado por peer debriefing</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 6: Viés de desejabilidade social</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Participantes respondem questionários de forma socialmente desejável</li>
+<li><strong>Exemplo:</strong> Seniores superestimam relevância de algoritmos para parecerem competentes</li>
+<li><strong>Impacto:</strong> Dados de percepção distorcidos, especialmente em entrevistas</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Garantir anonimato e confidencialidade</li>
+    <li>Reforçar que não há respostas "certas" em questionários</li>
+    <li>Triangular com dados comportamentais objetivos</li>
+    <li><strong>Limitação reconhecida:</strong> Difícil eliminar completamente, especialmente em entrevistas presenciais</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 7: Reatividade ao experimento (Hawthorne effect)</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Participantes alteram comportamento por estarem sendo observados</li>
+<li><strong>Exemplo:</strong> Tentam mais arduamente do que fariam em situação real</li>
+<li><strong>Impacto:</strong> Desempenho não representa habilidade típica</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Naturalizar contexto (similar a entrevistas técnicas reais)</li>
+    <li>Minimizar presença intrusiva do facilitador</li>
+    <li>Reconhecer que contexto experimental sempre difere do real</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>AMEAÇA 8: Hipóteses "adivinhadas" pelos participantes</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Participantes inferem que estão sendo comparados por senioridade</li>
+<li><strong>Impacto:</strong> Efeito demand characteristics - ajustam desempenho conforme expectativas percebidas</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Informações sobre objetivos do estudo genéricas pré-experimento</li>
+    <li>Explicação completa apenas após conclusão (debriefing)</li>
+    <li>Enfatizar que não é avaliação individual</li>
+  </ul>
+</li>
+</ul>
 <h3 id="134validadeexterna">13.4 Validade externa</h3>
-<p>Discuta em que contextos os resultados podem ser generalizados e quais diferenças de cenário podem limitar essa generalização.</p>
+
+
+<p>Validade externa refere-se à generalização dos resultados para outras populações, contextos e tempos.</p>
+
+<p><strong>AMEAÇA 1: Generalização para populações (Population validity)</strong></p>
+
+<p><strong>Limitação 1.1: Amostra de conveniência</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Participantes não são amostra aleatória de todos os desenvolvedores</li>
+<li><strong>Viés esperado:</strong> Mais motivados, mais disponíveis, possivelmente mais confiantes</li>
+<li><strong>Impacto:</strong> Resultados podem não representar desenvolvedores "típicos"</li>
+
+<li><strong>Mitigação parcial:</strong>
+  <ul>
+    <li>Diversificar canais de recrutamento</li>
+    <li>Descrever detalhadamente características da amostra</li>
+    <li>Reconhecer limitação explicitamente</li>
+    <li>Replicações futuras com amostras diferentes</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>Limitação 1.2: Contexto geográfico restrito</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Principalmente região de Belo Horizonte</li>
+<li><strong>Impacto:</strong> Pode não generalizar para outras regiões/países com culturas de trabalho diferentes</li>
+<li><strong>Exemplo:</strong> Ênfase em algoritmos pode variar entre mercados (Vale do Silício vs. interior do Brasil)</li>
+</ul>
+
+<p><strong>Limitação 1.3: Exclusão de perfis extremos</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Excluímos competidores experientes de programação competitiva</li>
+<li><strong>Impacto:</strong> Não sabemos como desenvolvedores com expertise alta se comportariam</li>
+<li><strong>Justificativa:</strong> Evitar outliers, mas limita generalização</li>
+</ul>
+
+<p><strong>AMEAÇA 2: Generalização para contextos (Ecological validity)</strong></p>
+
+<p><strong>Limitação 2.1: Ambiente artificial</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Laboratório ≠ ambiente de trabalho real</li>
+<li><strong>Diferenças:</strong> Sem acesso à internet, sem IDE familiar, sem colaboração, sem contexto de projeto</li>
+<li><strong>Impacto:</strong> Desempenho experimental pode não predizer desempenho profissional</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Reconhecer diferenças explicitamente</li>
+    <li>Coletar dados qualitativos sobre percepção de similaridade</li>
+    <li>Interpretar resultados com cautela quanto à relevância prática</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>Limitação 2.2: Tipo específico de tarefa</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Problemas algorítmicos puros ≠ desenvolvimento de software completo</li>
+<li><strong>Ausente no experimento:</strong> Design de sistemas, debugging de código legado, revisão de código, trabalho em equipe</li>
+<li><strong>Impacto:</strong> Resultados aplicam-se apenas a problemas algorítmicos, não a competência profissional ampla</li>
+</ul>
+
+<p><strong>Limitação 2.3: Pressão temporal específica</strong></p>
+<ul>
+<li><strong>Descrição:</strong> 3 horas, sem pausas extensas</li>
+<li><strong>Diferença:</strong> Trabalho real pode ter prazos mais longos ou mais curtos</li>
+<li><strong>Impacto:</strong> Desempenho sob pressão pode não refletir trabalho com tempo flexível</li>
+</ul>
+
+<p><strong>AMEAÇA 3: Generalização temporal</strong></p>
+
+<p><strong>Limitação 3.1: Momento histórico</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Experimento realizado em 2025, contexto de IA generativa</li>
+<li><strong>Impacto:</strong> Desenvolvedores atuais podem ter habilidades diferentes de gerações anteriores ou futuras</li>
+<li><strong>Exemplo:</strong> Geração que cresceu com Copilot pode ter perfil diferente</li>
+</ul>
+
+<p><strong>Limitação 3.2: Práticas de contratação atuais</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Relevância de programação competitiva em processos seletivos pode mudar</li>
+<li><strong>Impacto:</strong> Achados podem se tornar menos relevantes se práticas mudarem</li>
+</ul>
+
+<p><strong>AMEAÇA 4: Interação entre tratamento e seleção</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Efeitos observados podem ser específicos para desenvolvedores brasileiros dispostos a participar</li>
+<li><strong>Exemplo:</strong> Desenvolvedores que aceitaram participar podem ter perfil diferente (mais curiosos, mais confiantes)</li>
+<li><strong>Impacto:</strong> Relação senioridade-desempenho pode ser diferente em amostra verdadeiramente aleatória</li>
+</ul>
+
+<p><strong>AMEAÇA 5: Amostra qualitativa pequena (componente qualitativo)</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Apenas 5-10 entrevistas - não generalizável</li>
+<li><strong>Impacto:</strong> Temas identificados podem não representar experiências de todos os desenvolvedores</li>
+<li><strong>Viés de seleção para entrevistas:</strong> Participantes mais disponíveis/motivados podem ter perspectivas diferentes</li>
+<li><strong>Mitigação:</strong>
+  <ul>
+    <li>Ser explícito sobre limitação de generalização qualitativa</li>
+    <li>Usar linguagem apropriada ("alguns participantes relataram" vs. "desenvolvedores acreditam")</li>
+    <li>Triangular com dados quantitativos quando possível</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>ESTRATÉGIAS GERAIS PARA AUMENTAR VALIDADE EXTERNA:</strong></p>
+<ul>
+<li>Descrição detalhada da amostra, contexto e procedimentos (thick description)</li>
+<li>Replicações futuras em contextos variados recomendadas</li>
+<li>Ser conservador nas afirmações de generalização</li>
+<li>Discutir explicitamente limites de aplicabilidade dos resultados</li>
+<li>Focar em validade interna primeiro - relações causais confiáveis são prerequisito para generalização</li>
+</ul>
 <h3 id="135resumodasprincipaisameaaseestratgiasdemitigao">13.5 Resumo das principais ameaças e estratégias de mitigação</h3>
-<p>Faça uma síntese das ameaças mais críticas e das ações planejadas, de preferência em forma de lista ou tabela simples.</p>
+
+<table>
+<thead>
+<tr>
+<th>Tipo de Validade</th>
+<th>Ameaça Principal</th>
+<th>Gravidade</th>
+<th>Estratégia de Mitigação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conclusão</strong></td>
+<td>Poder estatístico limitado (n=30)</td>
+<td>Média</td>
+<td>Medidas repetidas, focar efeitos médios/grandes, reportar tamanhos de efeito e ICs</td>
+</tr>
+<tr>
+<td><strong>Conclusão</strong></td>
+<td>Violação de pressupostos</td>
+<td>Baixa</td>
+<td>Testar pressupostos, usar alternativas não-paramétricas quando necessário</td>
+</tr>
+<tr>
+<td><strong>Conclusão</strong></td>
+<td>Múltiplas comparações (inflação Tipo I)</td>
+<td>Média</td>
+<td>Pré-especificar hipóteses, correções post-hoc (Bonferroni, Tukey)</td>
+</tr>
+<tr>
+<td><strong>Interna</strong></td>
+<td>Viés de seleção (senioridade não randomizada)</td>
+<td><strong>Alta</strong></td>
+<td>ANCOVA com covariáveis, análises estratificadas, reconhecer limitação de causalidade</td>
+</tr>
+<tr>
+<td><strong>Interna</strong></td>
+<td>Efeito de aprendizagem (maturação)</td>
+<td>Média</td>
+<td>Ordem fixa para todos, modelar posição da questão, verificar diferenças entre grupos</td>
+</tr>
+<tr>
+<td><strong>Interna</strong></td>
+<td>Mortalidade diferencial</td>
+<td>Média</td>
+<td>Incentivar conclusão, registrar attrition por grupo, análise de sensibilidade</td>
+</tr>
+<tr>
+<td><strong>Interna</strong></td>
+<td>Difusão de tratamento (comunicação)</td>
+<td>Baixa</td>
+<td>Proibição explícita, monitoramento, detecção de código duplicado</td>
+</tr>
+<tr>
+<td><strong>Constructo</strong></td>
+<td>"Senioridade" é proxy imperfeito de expertise</td>
+<td><strong>Alta</strong></td>
+<td>Coletar anos de experiência, análises de sensibilidade, reconhecer limitação</td>
+</tr>
+<tr>
+<td><strong>Constructo</strong></td>
+<td>Programação competitiva ≠ trabalho real</td>
+<td><strong>Alta</strong></td>
+<td>Ser explícito sobre escopo limitado, não generalizar para competência ampla</td>
+</tr>
+<tr>
+<td><strong>Constructo</strong></td>
+<td>Viés de desejabilidade social</td>
+<td>Média</td>
+<td>Anonimato, triangulação com dados objetivos, reconhecer limitação</td>
+</tr>
+<tr>
+<td><strong>Constructo</strong></td>
+<td>Expectativas do experimentador</td>
+<td>Baixa</td>
+<td>Protocolo padronizado, avaliação cega, correção automatizada</td>
+</tr>
+<tr>
+<td><strong>Externa</strong></td>
+<td>Amostra de conveniência (não representativa)</td>
+<td><strong>Alta</strong></td>
+<td>Descrever amostra detalhadamente, ser conservador em generalizações, recomendar replicações</td>
+</tr>
+<tr>
+<td><strong>Externa</strong></td>
+<td>Ambiente artificial vs. trabalho real</td>
+<td><strong>Alta</strong></td>
+<td>Reconhecer diferenças, dados qualitativos sobre similaridade, interpretação cautelosa</td>
+</tr>
+<tr>
+<td><strong>Externa</strong></td>
+<td>Contexto geográfico restrito (BH)</td>
+<td>Média</td>
+<td>Explicitar limitação, sugerir estudos em outras regiões/países</td>
+</tr>
+<tr>
+<td><strong>Externa</strong></td>
+<td>Amostra qualitativa pequena (5-10 entrevistas)</td>
+<td>Média</td>
+<td>Linguagem apropriada ("alguns" vs. "todos"), triangulação, reconhecer não-generalização</td>
+</tr>
+<tr>
+<td><strong>Externa</strong></td>
+<td>Viés de seleção em entrevistas</td>
+<td>Baixa</td>
+<td>Diversificar convites, reconhecer viés, peer debriefing na análise</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>AMEAÇAS CRÍTICAS (prioridade de endereçamento):</strong></p>
+
+<ol>
+<li><strong>Viés de seleção (validade interna):</strong> Senioridade não randomizada - usar controles estatísticos extensivos</li>
+<li><strong>Operacionalização de senioridade (validade de constructo):</strong> Cargo formal é proxy imperfeito - triangular com outras medidas</li>
+<li><strong>Validade ecológica (validade externa):</strong> Programação competitiva ≠ trabalho real - ser explícito sobre escopo limitado</li>
+<li><strong>Amostra de conveniência (validade externa):</strong> Não representativa - descrever detalhadamente e ser conservador</li>
+</ol>
+
+<p><strong>PRINCÍPIOS ORIENTADORES:</strong></p>
+<ul>
+<li><strong>Transparência:</strong> Reportar todas as ameaças identificadas, não apenas as mitigadas</li>
+<li><strong>Honestidade:</strong> Reconhecer limitações claramente na discussão</li>
+<li><strong>Conservadorismo:</strong> Evitar over-claiming - afirmações cautelosas sobre causalidade e generalização</li>
+<li><strong>Rigor metodológico:</strong> Priorizar validade interna através de controles e padronização</li>
+<li><strong>Contexto claro:</strong> Delimitar claramente a que contextos/populações os resultados se aplicam</li>
+</ul>
+
+<p><strong>TRADE-OFFS RECONHECIDOS:</strong></p>
+<ul>
+<li><strong>Validade interna vs. externa:</strong> Ambiente controlado aumenta validade interna mas reduz externa</li>
+<li><strong>Precisão vs. recursos:</strong> Amostra maior seria ideal, mas n=30 é viável e suficiente para efeitos médios</li>
+<li><strong>Profundidade qualitativa vs. amplitude:</strong> Poucas entrevistas permitem aprofundamento, mas limitam generalização</li>
+</ul>
 <hr>
 <h2 id="14ticaprivacidadeeconformidade">14. Ética, privacidade e conformidade</h2>
 <h3 id="141questesticasusodesujeitosincentivosetc">14.1 Questões éticas (uso de sujeitos, incentivos, etc.)</h3>
