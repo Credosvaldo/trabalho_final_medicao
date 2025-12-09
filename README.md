@@ -3475,58 +3475,1440 @@ Semana 0:  Início do experimento principal
 <hr>
 <h2 id="14ticaprivacidadeeconformidade">14. Ética, privacidade e conformidade</h2>
 <h3 id="141questesticasusodesujeitosincentivosetc">14.1 Questões éticas (uso de sujeitos, incentivos, etc.)</h3>
-<p>Descreva potenciais questões éticas (pressão para participar, uso de estudantes, incentivos, riscos de exposição) e como serão tratadas.</p>
+
+<p><strong>Participação voluntária:</strong> Desenvolvedores participam por livre vontade, sem coerção. Empresas não devem pressionar funcionários.</p>
+
+<p><strong>Não maleficência:</strong> Experimento não causa danos - participantes não são avaliados individualmente, não há impacto em carreira ou remuneração.</p>
+
+<p><strong>Incentivos apropriados:</strong> Vale-presente de R$ 100 como agradecimento pelo tempo (3h + questionários), sem valor coercitivo.</p>
+
+<p><strong>Confidencialidade:</strong> Dados individuais não serão compartilhados com empregadores ou terceiros. Resultados apenas agregados.</p>
+
+<p><strong>Direito de retirada:</strong> Participantes podem desistir a qualquer momento sem justificativa ou penalidade.</p>
 <h3 id="142consentimentoinformado">14.2 Consentimento informado</h3>
-<p>Explique como os participantes serão informados sobre objetivos, riscos, benefícios e como registrarão seu consentimento.</p>
+
+<p><strong>Termo de Consentimento Livre e Esclarecido (TCLE):</strong> Documento em linguagem clara contendo:</p>
+<ul>
+<li>Objetivo do estudo (relação senioridade-desempenho em problemas algorítmicos)</li>
+<li>Procedimentos (3h resolvendo questões, questionários pré/pós, possível entrevista)</li>
+<li>Riscos mínimos (fadiga mental, desconforto por dificuldade das questões)</li>
+<li>Benefícios (contribuição científica, autoconhecimento de habilidades algorítmicas, vale-presente)</li>
+<li>Garantia de anonimato e confidencialidade</li>
+<li>Direito de desistir a qualquer momento</li>
+<li>Contato dos pesquisadores e comitê de ética</li>
+</ul>
+
+<p><strong>Processo de consentimento:</strong></p>
+<ul>
+<li>TCLE enviado com antecedência (mínimo 48h antes)</li>
+<li>Oportunidade para esclarecer dúvidas por e-mail ou presencialmente</li>
+<li>Assinatura digital ou física antes do início</li>
+<li>Duas vias: uma para participante, uma para pesquisador</li>
+</ul>
 <h3 id="143privacidadeeproteodedados">14.3 Privacidade e proteção de dados</h3>
-<p>Indique que dados pessoais serão coletados, como serão protegidos (anonimização, pseudoanonimização, controle de acesso) e por quanto tempo serão mantidos.</p>
+
+<p><strong>Dados coletados:</strong></p>
+<ul>
+<li><strong>Identificadores:</strong> Nome, e-mail, telefone (apenas para coordenação)</li>
+<li><strong>Dados demográficos:</strong> Idade, gênero, formação acadêmica</li>
+<li><strong>Dados profissionais:</strong> Cargo, anos de experiência, empresa (opcional)</li>
+<li><strong>Dados de desempenho:</strong> Código submetido, tempo por questão, acertos/erros</li>
+<li><strong>Dados qualitativos:</strong> Respostas a questionários e transcrições de entrevistas</li>
+</ul>
+
+<p><strong>Medidas de proteção:</strong></p>
+<ul>
+<li><strong>Pseudoanonimização:</strong> Cada participante recebe ID único (P001, P002...). Chave de vinculação armazenada separadamente com acesso restrito</li>
+<li><strong>Anonimização em publicações:</strong> Nenhum dado identificável em artigos ou relatórios</li>
+<li><strong>Armazenamento seguro:</strong> Dados em servidor criptografado com backup, acesso via autenticação de dois fatores</li>
+<li><strong>Controle de acesso:</strong> Apenas pesquisador principal e orientador</li>
+<li><strong>Minimização:</strong> Coletar apenas dados necessários para objetivos da pesquisa</li>
+</ul>
+
+<p><strong>Retenção:</strong> Dados mantidos por 5 anos (conforme Resolução CNS 510/2016), depois anonimizados irreversivelmente ou destruídos.</p>
+
+<p><strong>Conformidade LGPD:</strong> Participantes podem solicitar acesso, correção ou exclusão de seus dados a qualquer momento.</p>
 <h3 id="144aprovaesnecessriascomitdeticajurdicodpoetc">14.4 Aprovações necessárias (comitê de ética, jurídico, DPO, etc.)</h3>
-<p>Liste órgãos ou pessoas que precisam aprovar o experimento (comitê de ética, jurídico, DPO, gestores) e o status atual dessas aprovações.</p>
+
+<table>
+<thead>
+<tr>
+<th>Órgão/Pessoa</th>
+<th>Tipo de Aprovação</th>
+<th>Status</th>
+<th>Prazo Estimado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comitê de Ética em Pesquisa (CEP) da PUC Minas</td>
+<td>Aprovação ética para pesquisa com seres humanos</td>
+<td>Pendente submissão</td>
+<td>60-90 dias após submissão</td>
+</tr>
+<tr>
+<td>Orientador acadêmico</td>
+<td>Revisão e aprovação do protocolo experimental</td>
+<td>Em andamento</td>
+<td>Antes de submeter ao CEP</td>
+</tr>
+<tr>
+<td>Coordenação do curso</td>
+<td>Autorização para uso de laboratórios da universidade</td>
+<td>Pendente solicitação</td>
+<td>2 semanas</td>
+</tr>
+<tr>
+<td>Empresas parceiras (se houver recrutamento interno)</td>
+<td>Autorização para convidar funcionários</td>
+<td>Não aplicável (recrutamento aberto)</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Documentação a ser submetida ao CEP:</strong></p>
+<ul>
+<li>Plano experimental completo</li>
+<li>TCLE</li>
+<li>Questionários e roteiro de entrevista</li>
+<li>Currículo do pesquisador e orientador</li>
+<li>Declaração de infraestrutura</li>
+</ul>
+
+<p><strong>Observações:</strong></p>
+<ul>
+<li>Execução do experimento condicionada à aprovação do CEP</li>
+<li>Qualquer alteração no protocolo após aprovação requer emenda ao CEP</li>
+<li>Conformidade com Resolução CNS 510/2016 (pesquisa em ciências humanas e sociais)</li>
+</ul>
 <hr>
 <h2 id="15recursosinfraestruturaeoramento">15. Recursos, infraestrutura e orçamento</h2>
 <h3 id="151recursoshumanosepapis">15.1 Recursos humanos e papéis</h3>
-<p>Identifique os membros da equipe do experimento e descreva brevemente o papel e responsabilidade de cada um.</p>
+
+<table>
+<thead>
+<tr>
+<th>Papel</th>
+<th>Responsabilidades</th>
+<th>Dedicação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pesquisador principal</strong></td>
+<td>Planejamento, execução, análise, elaboração do relatório, publicação</td>
+<td>20h/semana por 6 meses</td>
+</tr>
+<tr>
+<td><strong>Orientador acadêmico</strong></td>
+<td>Revisão do protocolo, orientação metodológica, validação de análises</td>
+<td>2h/semana</td>
+</tr>
+<tr>
+<td><strong>Facilitador de sessão</strong></td>
+<td>Recepcionar participantes, aplicar protocolo, monitorar sessões, resolver problemas técnicos</td>
+<td>4h por sessão (total ~40h)</td>
+</tr>
+<tr>
+<td><strong>Avaliador de complexidade</strong></td>
+<td>Classificar soluções por complexidade algorítmica (cego para senioridade)</td>
+<td>~20h</td>
+</tr>
+<tr>
+<td><strong>Revisor qualitativo (peer debriefer)</strong></td>
+<td>Revisar codificação de entrevistas, discutir interpretações</td>
+<td>~10h</td>
+</tr>
+<tr>
+<td><strong>Suporte técnico</strong></td>
+<td>Configurar ambiente, integrar Judge0 API, gerar relatórios automatizados</td>
+<td>~15h (setup inicial)</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Observação:</strong> Pesquisador principal pode acumular papel de facilitador. Avaliador de complexidade e peer debriefer devem ser externos para reduzir viés.</p>
 <h3 id="152infraestruturatcnicanecessria">15.2 Infraestrutura técnica necessária</h3>
-<p>Liste ambientes, servidores, ferramentas, repositórios e integrações que devem estar disponíveis para executar o experimento.</p>
+
+<p><strong>Ambiente físico:</strong></p>
+<ul>
+<li>Laboratório com 10-15 estações de trabalho isoladas</li>
+<li>Rede local estável, sem acesso à internet externa</li>
+<li>Ar condicionado, iluminação adequada, baixo ruído</li>
+</ul>
+
+<p><strong>Hardware:</strong></p>
+<ul>
+<li>10-15 computadores com configuração mínima: i5, 8GB RAM, SSD</li>
+<li>Servidor local para hospedar sistema de submissão (ou VM na nuvem)</li>
+</ul>
+
+<p><strong>Software e ferramentas:</strong></p>
+<ul>
+<li><strong>IDE:</strong> VSCode pré-configurado (mesmas extensões em todas as máquinas)</li>
+<li><strong>Linguagens:</strong> Python 3.x, Java 17, C++ (compiladores instalados)</li>
+<li><strong>Sistema de submissão:</strong> Interface web customizada integrada com Judge0 API</li>
+<li><strong>Judge0 API:</strong> Conta com créditos suficientes (~300 submissões)</li>
+<li><strong>Banco de dados:</strong> PostgreSQL para armazenar submissões e metadados</li>
+<li><strong>Questionários:</strong> Google Forms ou LimeSurvey</li>
+<li><strong>Gravação de entrevistas:</strong> Gravador digital ou smartphone</li>
+<li><strong>Análise estatística:</strong> Python (scipy, statsmodels, pandas) e/ou R</li>
+<li><strong>Análise qualitativa:</strong> NVivo, Atlas.ti ou QDA Miner (licença acadêmica)</li>
+</ul>
+
+<p><strong>Repositórios:</strong></p>
+<ul>
+<li>GitHub privado para scripts de análise e documentação</li>
+<li>Armazenamento seguro (Google Drive institucional criptografado ou OneDrive) para dados sensíveis</li>
+</ul>
 <h3 id="153materiaiseinsumos">15.3 Materiais e insumos</h3>
-<p>Relacione materiais físicos ou digitais necessários (máquinas, licenças, formulários, dispositivos) que precisam estar prontos antes da operação.</p>
+
+<p><strong>Documentos impressos:</strong></p>
+<ul>
+<li>TCLE (2 vias por participante) - 60 cópias</li>
+<li>Guia do participante (breve) - 30 cópias</li>
+<li>Questionário pré-experimento (backup físico) - 30 cópias</li>
+<li>Questionário pós-experimento - 30 cópias</li>
+</ul>
+
+<p><strong>Materiais digitais:</strong></p>
+<ul>
+<li>10 questões de LeetCode (enunciados, casos de teste, soluções de referência)</li>
+<li>Scripts de inicialização do ambiente (VM snapshot ou Docker image)</li>
+<li>Cheat sheet de sintaxe (PDF em cada máquina)</li>
+<li>Roteiro de entrevista semiestruturada</li>
+</ul>
+
+<p><strong>Consumo:</strong></p>
+<ul>
+<li>Café, água, snacks para coffee break</li>
+<li>Papel, canetas, envelopes para TCLE</li>
+</ul>
+
+<p><strong>Incentivos:</strong></p>
+<ul>
+<li>30 vales-presente de R$ 100 (Amazon, Mercado Livre ou similar)</li>
+</ul>
+
+<p><strong>Equipamentos complementares:</strong></p>
+<ul>
+<li>Gravador digital ou smartphone para entrevistas</li>
+<li>Relógio/timer visível para controle de tempo</li>
+<li>Pen drives para backup local</li>
+</ul>
 <h3 id="154oramentoecustosestimados">15.4 Orçamento e custos estimados</h3>
-<p>Faça uma estimativa dos principais custos envolvidos (horas de pessoas, serviços, licenças, infraestrutura) e a fonte de financiamento.</p>
+
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detalhamento</th>
+<th>Custo Unitário</th>
+<th>Quantidade</th>
+<th>Total (R$)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Incentivos para participantes</strong></td>
+<td>Vale-presente</td>
+<td>100,00</td>
+<td>30</td>
+<td>3.000,00</td>
+</tr>
+<tr>
+<td><strong>Judge0 API</strong></td>
+<td>Créditos para ~300 submissões</td>
+<td>-</td>
+<td>-</td>
+<td>150,00</td>
+</tr>
+<tr>
+<td><strong>Software de análise qualitativa</strong></td>
+<td>Licença acadêmica NVivo (3 meses)</td>
+<td>-</td>
+<td>-</td>
+<td>0,00 (trial)</td>
+</tr>
+<tr>
+<td><strong>Armazenamento em nuvem</strong></td>
+<td>Google Drive ou OneDrive (institucional)</td>
+<td>-</td>
+<td>-</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td><strong>Servidor/VM (se necessário)</strong></td>
+<td>AWS EC2 ou similar (3 meses)</td>
+<td>~50,00/mês</td>
+<td>3</td>
+<td>150,00</td>
+</tr>
+<tr>
+<td><strong>Materiais de escritório</strong></td>
+<td>Impressões, papel, envelopes</td>
+<td>-</td>
+<td>-</td>
+<td>100,00</td>
+</tr>
+<tr>
+<td><strong>Coffee break</strong></td>
+<td>Café, água, snacks</td>
+<td>15,00</td>
+<td>10 sessões</td>
+<td>150,00</td>
+</tr>
+<tr>
+<td><strong>Consultoria estatística (opcional)</strong></td>
+<td>Revisão de análises</td>
+<td>-</td>
+<td>-</td>
+<td>0,00</td>
+</tr>
+<tr>
+<td colspan="4"><strong>TOTAL ESTIMADO</strong></td>
+<td><strong>3.550,00</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Custos não monetários (tempo):</strong></p>
+<ul>
+<li>Pesquisador principal: ~480h (20h/semana × 24 semanas)</li>
+<li>Orientador: ~48h (2h/semana × 24 semanas)</li>
+<li>Facilitador: ~40h</li>
+<li>Avaliadores externos: ~30h</li>
+</ul>
+
+<p><strong>Fonte de financiamento:</strong></p>
+<ul>
+<li>Recursos próprios do pesquisador (incentivos, materiais)</li>
+<li>Infraestrutura da universidade (laboratório, computadores) - sem custo adicional</li>
+<li>Licenças acadêmicas gratuitas ou trials</li>
+<li><strong>Alternativa:</strong> Solicitar fomento de edital interno da PUC Minas ou CNPq (PIBIC)</li>
+</ul>
+
+<p><strong>Sensibilidade:</strong> Orçamento pode variar -20% a +30% dependendo de negociações e imprevistos.</p>
 <hr>
 <h2 id="16cronogramamarcoseriscosoperacionais">16. Cronograma, marcos e riscos operacionais</h2>
 <h3 id="161macrocronogramaatoinciodaexecuo">16.1 Macrocronograma (até o início da execução)</h3>
-<p>Defina as principais datas e marcos (conclusão do plano, piloto, revisão, início da operação) com uma visão de tempo realista.</p>
+
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Atividades Principais</th>
+<th>Duração</th>
+<th>Data Prevista</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Planejamento</strong></td>
+<td>Elaboração do protocolo experimental completo</td>
+<td>4 semanas</td>
+<td>Dez/2025</td>
+</tr>
+<tr>
+<td><strong>2. Revisão e ajustes</strong></td>
+<td>Revisão do orientador, incorporação de feedback</td>
+<td>2 semanas</td>
+<td>Jan/2026</td>
+</tr>
+<tr>
+<td><strong>3. Submissão ao CEP</strong></td>
+<td>Preparação e envio de documentação ao Comitê de Ética</td>
+<td>1 semana</td>
+<td>Jan/2026</td>
+</tr>
+<tr>
+<td><strong>4. Aguardo aprovação CEP</strong></td>
+<td>Análise pelo comitê (paralelizar com preparação técnica)</td>
+<td>60-90 dias</td>
+<td>Fev-Abr/2026</td>
+</tr>
+<tr>
+<td><strong>5. Preparação técnica</strong></td>
+<td>Setup de infraestrutura, integração Judge0, seleção de questões</td>
+<td>3 semanas</td>
+<td>Fev-Mar/2026</td>
+</tr>
+<tr>
+<td><strong>6. Desenvolvimento de instrumentos</strong></td>
+<td>Questionários, TCLE, guias, scripts</td>
+<td>2 semanas</td>
+<td>Mar/2026</td>
+</tr>
+<tr>
+<td><strong>7. Recrutamento</strong></td>
+<td>Divulgação, triagem, confirmações</td>
+<td>4 semanas</td>
+<td>Abr/2026</td>
+</tr>
+<tr>
+<td><strong>8. Piloto</strong></td>
+<td>Teste com 3 participantes, ajustes</td>
+<td>1 semana</td>
+<td>Abr/2026</td>
+</tr>
+<tr>
+<td><strong>9. Revisão pós-piloto</strong></td>
+<td>Análise de problemas, refinamento de protocolo</td>
+<td>1 semana</td>
+<td>Mai/2026</td>
+</tr>
+<tr>
+<td><strong>10. INÍCIO DA EXECUÇÃO</strong></td>
+<td>Primeira sessão experimental</td>
+<td>-</td>
+<td><strong>Mai/2026</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Marcos críticos (GO/NO-GO):</strong></p>
+<ul>
+<li><strong>M1:</strong> Aprovação do orientador (antes de submeter ao CEP)</li>
+<li><strong>M2:</strong> Aprovação do CEP (condição obrigatória para execução)</li>
+<li><strong>M3:</strong> Piloto bem-sucedido (critérios: tempo adequado, sem bugs críticos, participantes compreendem instruções)</li>
+<li><strong>M4:</strong> Mínimo de 24 participantes confirmados (80% do alvo)</li>
+</ul>
 <h3 id="162dependnciasentreatividades">16.2 Dependências entre atividades</h3>
-<p>Indique quais atividades dependem de outras para começar (por exemplo, treinamento após aprovação ética), deixando essas dependências claras.</p>
+
+<p><strong>Cadeia crítica (caminho mais longo):</strong></p>
+<p>Planejamento → Revisão → Submissão CEP → <strong>Aprovação CEP</strong> → Recrutamento → Piloto → Execução</p>
+
+<p><strong>Dependências detalhadas:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>Atividade</th>
+<th>Depende de</th>
+<th>Pode paralelizar com</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Submissão ao CEP</td>
+<td>Aprovação do orientador</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Preparação técnica</td>
+<td>Protocolo finalizado</td>
+<td>Aguardo aprovação CEP</td>
+</tr>
+<tr>
+<td>Desenvolvimento de instrumentos</td>
+<td>Protocolo finalizado</td>
+<td>Aguardo aprovação CEP, Preparação técnica</td>
+</tr>
+<tr>
+<td>Recrutamento</td>
+<td><strong>Aprovação do CEP</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Piloto</td>
+<td>Aprovação CEP + Infraestrutura pronta + Instrumentos prontos</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Execução</td>
+<td>Piloto bem-sucedido + Participantes recrutados (mínimo 24)</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Gargalo principal:</strong> Aprovação do CEP (60-90 dias) bloqueia recrutamento. <strong>Mitigação:</strong> Paralelizar preparação técnica e desenvolvimento de materiais durante espera.</p>
+
+<p><strong>Atividades que podem antecipar:</strong></p>
+<ul>
+<li>Setup de infraestrutura (pode começar antes da aprovação)</li>
+<li>Seleção preliminar de questões LeetCode (validação final após piloto)</li>
+<li>Rascunho de instrumentos (refinamento após aprovação CEP se houver ressalvas)</li>
+</ul>
 <h3 id="163riscosoperacionaiseplanodecontingncia">16.3 Riscos operacionais e plano de contingência</h3>
-<p>Liste riscos ligados a cronograma, disponibilidade de pessoas ou recursos, e descreva ações de contingência caso esses riscos se materializem.</p>
+
+<table>
+<thead>
+<tr>
+<th>Risco</th>
+<th>Probabilidade</th>
+<th>Impacto</th>
+<th>Contingência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Atraso na aprovação do CEP</strong></td>
+<td>Média</td>
+<td>Alto</td>
+<td>Submeter com antecedência máxima, manter comunicação com CEP, preparar resposta rápida a pendências</td>
+</tr>
+<tr>
+<td><strong>Dificuldade no recrutamento</strong></td>
+<td>Média-Alta</td>
+<td>Alto</td>
+<td>Múltiplos canais (LinkedIn, comunidades, universidades), aumentar incentivo para R$ 150, estender janela de recrutamento</td>
+</tr>
+<tr>
+<td><strong>Taxa alta de no-show</strong></td>
+<td>Média</td>
+<td>Médio</td>
+<td>Recrutar 35-40 participantes (buffer de 15-25%), confirmar 48h antes, lembrete 24h antes</td>
+</tr>
+<tr>
+<td><strong>Problemas técnicos (Judge0 API fora do ar)</strong></td>
+<td>Baixa</td>
+<td>Alto</td>
+<td>Testar extensivamente antes, ter sistema de submissão backup local, reagendar sessão se necessário</td>
+</tr>
+<tr>
+<td><strong>Indisponibilidade de laboratório</strong></td>
+<td>Baixa</td>
+<td>Médio</td>
+<td>Reservar com antecedência, ter laboratório alternativo identificado, opção de sessões remotas (última instância)</td>
+</tr>
+<tr>
+<td><strong>Piloto revela problemas graves</strong></td>
+<td>Média</td>
+<td>Médio</td>
+<td>Tempo buffer de 1-2 semanas para ajustes, critérios GO/NO-GO claros</td>
+</tr>
+<tr>
+<td><strong>Participante desiste durante sessão</strong></td>
+<td>Baixa</td>
+<td>Baixo</td>
+<td>Protocolo de retirada definido, registrar motivo, substituir participante</td>
+</tr>
+<tr>
+<td><strong>Perda de dados</strong></td>
+<td>Baixa</td>
+<td>Alto</td>
+<td>Backup automático diário em 2 locais, exportação imediata após cada sessão</td>
+</tr>
+<tr>
+<td><strong>Pesquisador principal adoece/indisponível</strong></td>
+<td>Baixa</td>
+<td>Alto</td>
+<td>Documentação detalhada, facilitador backup treinado, cronograma com folga</td>
+</tr>
+<tr>
+<td><strong>Questões LeetCode vazam antes do experimento</strong></td>
+<td>Baixa</td>
+<td>Médio</td>
+<td>Não divulgar questões específicas, ter conjunto alternativo de questões preparado</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Plano de contingência crítico (experimento inviável):</strong></p>
+<ul>
+<li><strong>Se recrutamento falhar completamente:</strong> Ajustar desenho para n=20 (poder reduzido, focar em efeitos grandes), ou estender prazo por 2 meses</li>
+<li><strong>Se CEP negar aprovação:</strong> Revisar protocolo conforme pareceres, resubmeter (pode atrasar 3-4 meses)</li>
+<li><strong>Se infraestrutura técnica for inviável:</strong> Simplificar para experimento totalmente manual (correção manual de código, sem automação)</li>
+</ul>
+
+<p><strong>Monitoramento:</strong> Revisão semanal de riscos durante fase de preparação, diária durante execução.</p>
 <hr>
 <h2 id="17governanadoexperimento">17. Governança do experimento</h2>
 <h3 id="171papiseresponsabilidadesformais">17.1 Papéis e responsabilidades formais</h3>
-<p>Defina quem decide, quem executa, quem revisa e quem apenas deve ser informado, deixando claro o fluxo de responsabilidade.</p>
+
+<p><strong>Matriz RACI (Responsible, Accountable, Consulted, Informed):</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>Atividade/Decisão</th>
+<th>Pesquisador Principal</th>
+<th>Orientador</th>
+<th>CEP</th>
+<th>Facilitador</th>
+<th>Participantes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desenho experimental</td>
+<td>R, A</td>
+<td>C</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Aprovação do protocolo</td>
+<td>R</td>
+<td>A</td>
+<td>A (ética)</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Seleção de questões</td>
+<td>R, A</td>
+<td>C</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Recrutamento</td>
+<td>R, A</td>
+<td>I</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Execução de sessões</td>
+<td>A</td>
+<td>I</td>
+<td>-</td>
+<td>R</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Coleta de dados</td>
+<td>A</td>
+<td>I</td>
+<td>-</td>
+<td>R</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Análise estatística</td>
+<td>R, A</td>
+<td>C</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Interpretação de resultados</td>
+<td>R, A</td>
+<td>C</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Mudanças no protocolo</td>
+<td>R</td>
+<td>A</td>
+<td>A (se substancial)</td>
+<td>I</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Publicação de resultados</td>
+<td>R, A</td>
+<td>C</td>
+<td>-</td>
+<td>-</td>
+<td>I (resultados agregados)</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Legenda:</strong> R=Responsible (executa), A=Accountable (aprova/decide), C=Consulted (consultado), I=Informed (informado)</p>
+
+<p><strong>Autoridades e limites de decisão:</strong></p>
+<ul>
+<li><strong>Pesquisador principal:</strong> Decisões operacionais do dia a dia, ajustes menores no protocolo (ex: horários de sessões)</li>
+<li><strong>Orientador:</strong> Aprovação de mudanças metodológicas, validação de análises, autorização para publicação</li>
+<li><strong>CEP:</strong> Veto sobre aspectos éticos, exigir mudanças substanciais no protocolo</li>
+<li><strong>Facilitador:</strong> Decisões em tempo real durante sessões (ex: pausas técnicas, esclarecimentos dentro do script)</li>
+</ul>
 <h3 id="172ritosdeacompanhamentoprexecuo">17.2 Ritos de acompanhamento pré-execução</h3>
-<p>Descreva as reuniões, checkpoints e revisões previstos antes da execução, incluindo frequência e participantes.</p>
+
+<p><strong>1. Reuniões de orientação:</strong></p>
+<ul>
+<li><strong>Frequência:</strong> Semanal (1h)</li>
+<li><strong>Participantes:</strong> Pesquisador principal + Orientador</li>
+<li><strong>Objetivos:</strong> Revisar progresso, discutir decisões metodológicas, resolver bloqueios</li>
+<li><strong>Entregas esperadas:</strong> Rascunhos de seções do protocolo, instrumentos, cronograma atualizado</li>
+</ul>
+
+<p><strong>2. Revisão de marcos (GO/NO-GO):</strong></p>
+<ul>
+<li><strong>Marco 1 - Protocolo completo:</strong> Reunião de 2h para validação final antes de submeter ao CEP</li>
+<li><strong>Marco 2 - Pós-piloto:</strong> Reunião de 1,5h para decidir se execução pode prosseguir ou se requer ajustes</li>
+<li><strong>Marco 3 - Pré-execução:</strong> Checklist de prontidão (30min, ver seção 20)</li>
+</ul>
+
+<p><strong>3. Status report assíncrono:</strong></p>
+<ul>
+<li><strong>Frequência:</strong> Quinzenal (se não houver reunião)</li>
+<li><strong>Formato:</strong> E-mail com template estruturado (progresso, riscos, decisões necessárias)</li>
+<li><strong>Destinatário:</strong> Orientador</li>
+</ul>
+
+<p><strong>4. Checkpoint com CEP (se necessário):</strong></p>
+<ul>
+<li><strong>Ocasião:</strong> Se houver pendências ou esclarecimentos solicitados</li>
+<li><strong>Formato:</strong> Resposta formal por escrito + reunião presencial se solicitado</li>
+</ul>
+
+<p><strong>5. Ensaio do piloto:</strong></p>
+<ul>
+<li><strong>Data:</strong> 1 semana antes do piloto real</li>
+<li><strong>Participantes:</strong> Pesquisador, facilitador, 1 voluntário informal</li>
+<li><strong>Objetivo:</strong> Testar logística, timing, identificar problemas técnicos</li>
+</ul>
 <h3 id="173processodecontroledemudanasnoplano">17.3 Processo de controle de mudanças no plano</h3>
-<p>Explique como mudanças no desenho ou no escopo do experimento serão propostas, analisadas, aprovadas e registradas.</p>
+
+<p><strong>Classificação de mudanças:</strong></p>
+
+<p><strong>Tipo 1 - Mudanças menores (não requerem aprovação formal):</strong></p>
+<ul>
+<li>Ajustes de cronograma sem impacto no desenho</li>
+<li>Correções de erros tipográficos em instrumentos</li>
+<li>Mudanças logísticas (horário de sessões, local dentro da mesma universidade)</li>
+<li><strong>Processo:</strong> Pesquisador decide, documenta, informa orientador por e-mail</li>
+</ul>
+
+<p><strong>Tipo 2 - Mudanças moderadas (aprovação do orientador):</strong></p>
+<ul>
+<li>Substituição de questões por outras de dificuldade equivalente</li>
+<li>Ajustes em questionários (adicionar/remover itens não-críticos)</li>
+<li>Mudança no tamanho amostral dentro de ±10%</li>
+<li>Alteração no valor do incentivo</li>
+<li><strong>Processo:</strong>
+  <ol>
+    <li>Pesquisador elabora proposta de mudança (justificativa + impacto esperado)</li>
+    <li>Submete ao orientador por e-mail ou em reunião</li>
+    <li>Orientador aprova/rejeita em até 3 dias úteis</li>
+    <li>Se aprovado, atualizar protocolo e documentar em log de mudanças</li>
+  </ol>
+</li>
+</ul>
+
+<p><strong>Tipo 3 - Mudanças substanciais (aprovação do orientador + CEP):</strong></p>
+<ul>
+<li>Alteração no desenho experimental (ex: adicionar grupo de controle)</li>
+<li>Mudança nas hipóteses principais</li>
+<li>Modificação significativa no protocolo de coleta de dados</li>
+<li>Mudanças que aumentem riscos para participantes</li>
+<li>Redução de tamanho amostral >10%</li>
+<li><strong>Processo:</strong>
+  <ol>
+    <li>Pesquisador elabora proposta detalhada</li>
+    <li>Discussão com orientador (reunião dedicada)</li>
+    <li>Se orientador aprovar, submeter emenda ao CEP via Plataforma Brasil</li>
+    <li>Aguardar aprovação do CEP (15-30 dias)</li>
+    <li>Somente implementar após aprovação</li>
+    <li>Atualizar todos os documentos e instrumentos</li>
+  </ol>
+</li>
+</ul>
+
+<p><strong>Log de mudanças (Change Log):</strong></p>
+<ul>
+<li><strong>Formato:</strong> Planilha com colunas: Data | Tipo | Descrição | Justificativa | Aprovador | Status</li>
+<li><strong>Localização:</strong> Repositório GitHub + anexo ao protocolo final</li>
+<li><strong>Atualização:</strong> Toda mudança deve ser registrada no prazo de 24h</li>
+</ul>
+
+<p><strong>Comunicação de mudanças:</strong></p>
+<ul>
+<li><strong>Mudanças Tipo 1:</strong> E-mail informativo ao orientador</li>
+<li><strong>Mudanças Tipo 2:</strong> E-mail formal ao orientador, atualização do protocolo versionado</li>
+<li><strong>Mudanças Tipo 3:</strong> Comunicação formal ao CEP, e-mail a participantes já recrutados (se relevante), atualização de TCLE se necessário</li>
+</ul>
+
+<p><strong>Mudanças pós-início da execução:</strong></p>
+<ul>
+<li>Evitar ao máximo mudanças após primeira sessão experimental</li>
+<li>Se inevitável: análise de sensibilidade comparando dados antes/depois da mudança</li>
+<li>Documentar detalhadamente na seção de limitações do relatório final</li>
+</ul>
 <hr>
 <h2 id="18planodedocumentaoereprodutibilidade">18. Plano de documentação e reprodutibilidade</h2>
 <h3 id="181repositrioseconvenesdenomeao">18.1 Repositórios e convenções de nomeação</h3>
-<p>Indique onde o plano, instrumentos, scripts e dados (futuros) serão armazenados e quais convenções de nomes serão usadas.</p>
+
+<p><strong>Repositórios:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>Tipo de Conteúdo</th>
+<th>Local de Armazenamento</th>
+<th>Acesso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Protocolo experimental, instrumentos</td>
+<td>GitHub privado: <code>github.com/[user]/seniority-leetcode-experiment</code></td>
+<td>Pesquisador + Orientador</td>
+</tr>
+<tr>
+<td>Scripts de análise (Python/R)</td>
+<td>Mesmo repositório GitHub (pasta <code>/analysis</code>)</td>
+<td>Pesquisador + Orientador</td>
+</tr>
+<tr>
+<td>Dados brutos identificados</td>
+<td>Google Drive institucional criptografado</td>
+<td>Apenas pesquisador</td>
+</tr>
+<tr>
+<td>Dados anonimizados</td>
+<td>GitHub (pasta <code>/data</code>) + Zenodo (DOI público após publicação)</td>
+<td>Público (pós-publicação)</td>
+</tr>
+<tr>
+<td>TCLEs assinados</td>
+<td>Pasta física trancada + scan em Drive criptografado</td>
+<td>Apenas pesquisador</td>
+</tr>
+<tr>
+<td>Transcrições de entrevistas</td>
+<td>Drive criptografado (anonimizadas)</td>
+<td>Pesquisador + Revisor qualitativo</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Convenções de nomeação de arquivos:</strong></p>
+
+<p><strong>Documentos gerais:</strong></p>
+<ul>
+<li>Protocolo: <code>protocolo_experimental_vX.Y.md</code> (X=versão maior, Y=revisão)</li>
+<li>TCLE: <code>TCLE_v2.0.pdf</code></li>
+<li>Questionários: <code>questionario_pre_v1.0.pdf</code>, <code>questionario_pos_v1.0.pdf</code></li>
+</ul>
+
+<p><strong>Dados:</strong></p>
+<ul>
+<li>Dados brutos: <code>dados_brutos_YYYYMMDD.csv</code></li>
+<li>Dados processados: <code>dados_processados_YYYYMMDD.csv</code></li>
+<li>Dados anonimizados: <code>dados_anonimizados_public.csv</code></li>
+<li>Por participante: <code>P001_submissoes.json</code>, <code>P001_questionario.json</code></li>
+<li>Transcrições: <code>entrevista_P001_YYYYMMDD_anonimizada.txt</code></li>
+</ul>
+
+<p><strong>Scripts:</strong></p>
+<ul>
+<li>Análise: <code>01_preparacao_dados.py</code>, <code>02_analise_descritiva.py</code>, <code>03_testes_hipoteses.py</code></li>
+<li>Visualizações: <code>plot_desempenho_por_senioridade.py</code></li>
+<li>Utilidades: <code>utils_anonimizacao.py</code>, <code>utils_estatistica.py</code></li>
+</ul>
+
+<p><strong>Estrutura de pastas no repositório:</strong></p>
+<pre><code>/
+├── README.md (visão geral do experimento)
+├── protocolo_experimental_v1.0.md
+├── /instruments (TCLE, questionários, roteiro entrevista)
+├── /materials (guias, cheat sheets)
+├── /analysis (scripts de análise)
+├── /data
+│   ├── /raw (ignorado no Git - apenas local)
+│   ├── /processed
+│   └── /public (dados anonimizados para compartilhamento)
+├── /results (gráficos, tabelas)
+└── /docs (documentação adicional)
+</code></pre>
 <h3 id="182templateseartefatospadro">18.2 Templates e artefatos padrão</h3>
-<p>Liste os modelos (questionários, formulários, checklists, scripts) que serão usados e onde podem ser encontrados.</p>
+
+<p><strong>Templates disponíveis no repositório (<code>/instruments</code> e <code>/materials</code>):</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>Artefato</th>
+<th>Arquivo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TCLE</strong></td>
+<td><code>TCLE_v2.0.pdf</code></td>
+<td>Termo de Consentimento Livre e Esclarecido (2 páginas)</td>
+</tr>
+<tr>
+<td><strong>Questionário demográfico</strong></td>
+<td><code>questionario_pre.pdf</code></td>
+<td>Idade, gênero, formação, experiência (Google Forms + PDF)</td>
+</tr>
+<tr>
+<td><strong>Questionário pós-experimento</strong></td>
+<td><code>questionario_pos.pdf</code></td>
+<td>Percepção de dificuldade, familiaridade, fadiga</td>
+</tr>
+<tr>
+<td><strong>Roteiro de entrevista</strong></td>
+<td><code>roteiro_entrevista_semiestruturada.md</code></td>
+<td>Perguntas-guia para entrevistas qualitativas</td>
+</tr>
+<tr>
+<td><strong>Guia do participante</strong></td>
+<td><code>guia_participante.pdf</code></td>
+<td>Instruções gerais, regras, o que esperar (1 página)</td>
+</tr>
+<tr>
+<td><strong>Cheat sheet de sintaxe</strong></td>
+<td><code>cheat_sheet_sintaxe.pdf</code></td>
+<td>Referência rápida Python/Java/C++ (1 página)</td>
+</tr>
+<tr>
+<td><strong>Manual do facilitador</strong></td>
+<td><code>manual_facilitador.md</code></td>
+<td>Passo a passo da sessão, script de boas-vindas, FAQs</td>
+</tr>
+<tr>
+<td><strong>Checklist pré-sessão</strong></td>
+<td><code>checklist_pre_sessao.md</code></td>
+<td>Verificações antes de iniciar (computadores, rede, materiais)</td>
+</tr>
+<tr>
+<td><strong>Checklist pós-sessão</strong></td>
+<td><code>checklist_pos_sessao.md</code></td>
+<td>Backup de dados, limpeza de ambiente, notas</td>
+</tr>
+<tr>
+<td><strong>Formulário de consentimento para entrevista</strong></td>
+<td><code>consentimento_entrevista.pdf</code></td>
+<td>Autorização para gravação de áudio</td>
+</tr>
+<tr>
+<td><strong>Template de notas de observação</strong></td>
+<td><code>template_notas_observacao.md</code></td>
+<td>Registro de comportamentos durante sessão</td>
+</tr>
+<tr>
+<td><strong>E-mail de convite</strong></td>
+<td><code>email_convite_template.txt</code></td>
+<td>Texto padrão para recrutamento</td>
+</tr>
+<tr>
+<td><strong>E-mail de confirmação</strong></td>
+<td><code>email_confirmacao_template.txt</code></td>
+<td>Confirmação de data/horário, instruções de comparecimento</td>
+</tr>
+<tr>
+<td><strong>E-mail de lembrete</strong></td>
+<td><code>email_lembrete_24h.txt</code></td>
+<td>Lembrete 24h antes da sessão</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Scripts utilitários (<code>/analysis/utils</code>):</strong></p>
+<ul>
+<li><code>anonimizar_dados.py</code> - Remove identificadores e gera IDs de participante</li>
+<li><code>validar_casos_teste.py</code> - Verifica correção dos casos de teste das questões</li>
+<li><code>calcular_metricas.py</code> - Funções para cálculo de desempenho, tempo, complexidade</li>
+<li><code>gerar_relatorio_sessao.py</code> - Relatório automatizado pós-sessão</li>
+</ul>
+
+<p><strong>Documentos de referência (<code>/docs</code>):</strong></p>
+<ul>
+<li><code>bibliografia.bib</code> - Referências bibliográficas (BibTeX)</li>
+<li><code>criterios_complexidade.md</code> - Definições para classificação de complexidade algorítmica</li>
+<li><code>FAQ_participantes.md</code> - Perguntas frequentes e respostas</li>
+</ul>
 <h3 id="183planodeempacotamentoparareplicaofutura">18.3 Plano de empacotamento para replicação futura</h3>
-<p>Descreva o que será organizado desde já (documentos, scripts, instruções) para facilitar a replicação do experimento por outras equipes ou no futuro.</p>
+
+<p><strong>Objetivo:</strong> Permitir que outros pesquisadores repliquem o experimento com mínimo de ambiguidade.</p>
+
+<p><strong>Pacote de replicação incluirá:</strong></p>
+
+<p><strong>1. Protocolo detalhado:</strong></p>
+<ul>
+<li>Este documento completo (protocolo experimental)</li>
+<li>Justificativa de todas as decisões metodológicas</li>
+<li>Log de mudanças durante execução</li>
+<li>Lições aprendidas e recomendações para replicação</li>
+</ul>
+
+<p><strong>2. Materiais de coleta de dados:</strong></p>
+<ul>
+<li>Lista exata das 10 questões LeetCode (links + enunciados + casos de teste)</li>
+<li>Todos os questionários (formato editável + PDF)</li>
+<li>Roteiro de entrevista completo</li>
+<li>TCLE (como modelo adaptável)</li>
+</ul>
+
+<p><strong>3. Dados anonimizados:</strong></p>
+<ul>
+<li>Dataset público em formato CSV com dicionário de dados</li>
+<li>Codebook detalhado (descrição de cada variável, valores possíveis, missing data)</li>
+<li>Metadados: data de coleta, versão dos instrumentos, condições experimentais</li>
+</ul>
+
+<p><strong>4. Scripts de análise reprodutíveis:</strong></p>
+<ul>
+<li>Código-fonte completo (Python/R) com comentários</li>
+<li>Arquivo <code>requirements.txt</code> ou <code>environment.yml</code> (dependências)</li>
+<li>Notebook Jupyter/R Markdown com análises passo a passo</li>
+<li>Instruções para executar (<code>README_ANALYSIS.md</code>)</li>
+</ul>
+
+<p><strong>5. Documentação de setup técnico:</strong></p>
+<ul>
+<li>Instruções para configurar ambiente experimental (instalações, configurações)</li>
+<li>Integração com Judge0 API (ou alternativas)</li>
+<li>Especificações de hardware/software</li>
+<li>Docker image ou VM snapshot (se viável)</li>
+</ul>
+
+<p><strong>6. Resultados e visualizações:</strong></p>
+<ul>
+<li>Tabelas de resultados em formato legível (CSV + LaTeX)</li>
+<li>Gráficos em alta resolução (PDF/SVG)</li>
+<li>Relatório estatístico completo</li>
+</ul>
+
+<p><strong>Formato de distribuição:</strong></p>
+<ul>
+<li><strong>Durante pesquisa:</strong> Repositório GitHub privado</li>
+<li><strong>Após publicação:</strong>
+  <ul>
+    <li>Repositório GitHub público (sem dados identificáveis)</li>
+    <li>Dados depositados no Zenodo com DOI permanente</li>
+    <li>Link no artigo publicado para materiais suplementares</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>Checklist de replicabilidade (baseado em TOP Guidelines):</strong></p>
+<ul>
+<li>☑ Protocolo pré-registrado ou publicado antes da coleta</li>
+<li>☑ Materiais disponíveis publicamente</li>
+<li>☑ Dados brutos disponíveis (anonimizados)</li>
+<li>☑ Scripts de análise disponíveis e executáveis</li>
+<li>☑ Documentação suficiente para replicação independente</li>
+<li>☑ Licença aberta (MIT ou CC-BY para documentos)</li>
+</ul>
+
+<p><strong>README principal do repositório incluirá:</strong></p>
+<ul>
+<li>Resumo do experimento (1 parágrafo)</li>
+<li>Como citar o trabalho</li>
+<li>Estrutura de pastas e conteúdo</li>
+<li>Instruções de instalação e execução</li>
+<li>Licença de uso</li>
+<li>Contato dos autores</li>
+<li>Citação de ferramentas e bibliotecas utilizadas</li>
+</ul>
+
+<p><strong>Versionamento:</strong></p>
+<ul>
+<li>Git tags para marcos importantes (v1.0-piloto, v2.0-execucao, v3.0-final)</li>
+<li>Releases no GitHub com arquivos ZIP para download completo</li>
+<li>DOI do Zenodo atualizado com cada versão significativa</li>
+</ul>
+
+<p><strong>Cronograma de empacotamento:</strong></p>
+<ul>
+<li><strong>Durante coleta:</strong> Documentar decisões e mudanças em tempo real</li>
+<li><strong>Após coleta:</strong> Organizar dados, finalizar scripts (2 semanas)</li>
+<li><strong>Antes de submeter artigo:</strong> Pacote completo pronto para revisão (1 semana)</li>
+<li><strong>Após aceite do artigo:</strong> Tornar repositório público, gerar DOI (1 dia)</li>
+</ul>
 <hr>
 <h2 id="19planodecomunicao">19. Plano de comunicação</h2>
 <h3 id="191pblicosemensagenschaveprexecuo">19.1 Públicos e mensagens-chave pré-execução</h3>
-<p>Liste os grupos que precisam ser comunicados e quais mensagens principais devem receber (objetivos, escopo, datas, impactos esperados).</p>
+
+<table>
+<thead>
+<tr>
+<th>Público</th>
+<th>Mensagens-Chave</th>
+<th>Timing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Orientador acadêmico</strong></td>
+<td>• Progresso do planejamento<br>• Decisões metodológicas que requerem validação<br>• Riscos e bloqueios<br>• Marcos alcançados</td>
+<td>Semanal (reuniões) + updates críticos imediatos</td>
+</tr>
+<tr>
+<td><strong>CEP</strong></td>
+<td>• Submissão formal do protocolo<br>• Respostas a pendências<br>• Notificação de mudanças substanciais<br>• Relatórios de acompanhamento (se exigidos)</td>
+<td>Conforme cronograma CEP</td>
+</tr>
+<tr>
+<td><strong>Coordenação do curso/laboratório</strong></td>
+<td>• Solicitação de uso de infraestrutura<br>• Datas e horários de ocupação<br>• Necessidades técnicas específicas</td>
+<td>6 semanas antes da execução</td>
+</tr>
+<tr>
+<td><strong>Candidatos a participantes</strong></td>
+<td>• Convite: objetivo geral, duração, incentivo, critérios de elegibilidade<br>• Confirmação: data, horário, local, o que trazer<br>• Lembrete: confirmar presença, instruções de acesso<br>• Pós-experimento: agradecimento, próximos passos</td>
+<td>Convite: 4 semanas antes<br>Confirmação: 2 semanas antes<br>Lembrete: 24h antes</td>
+</tr>
+<tr>
+<td><strong>Facilitador e equipe de apoio</strong></td>
+<td>• Briefing sobre protocolo e papel<br>• Cronograma de sessões<br>• Treinamento sobre ferramentas e procedimentos<br>• Updates sobre mudanças no protocolo</td>
+<td>2 semanas antes da primeira sessão</td>
+</tr>
+<tr>
+<td><strong>Avaliadores externos</strong></td>
+<td>• Convite e escopo do trabalho<br>• Cronograma de entregas<br>• Instruções para avaliação cega<br>• Agradecimento e reconhecimento</td>
+<td>Convite: 4 semanas antes<br>Entrega: após coleta</td>
+</tr>
+<tr>
+<td><strong>Comunidade acadêmica (pós-execução)</strong></td>
+<td>• Resultados principais (agregados)<br>• Publicações geradas<br>• Disponibilização de dados/materiais</td>
+<td>Após publicação</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Mensagens a evitar (para não comprometer validade):</strong></p>
+<ul>
+<li>Detalhes específicos das questões antes do experimento</li>
+<li>Hipóteses exatas (evitar demand characteristics)</li>
+<li>Comparações entre grupos durante recrutamento</li>
+</ul>
 <h3 id="192canaisefrequnciadecomunicao">19.2 Canais e frequência de comunicação</h3>
-<p>Defina por quais canais (e-mail, reuniões, Slack/Teams, etc.) e com que frequência as comunicações serão feitas.</p>
+
+<table>
+<thead>
+<tr>
+<th>Público</th>
+<th>Canais</th>
+<th>Frequência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Orientador</strong></td>
+<td>• Reunião presencial/videochamada<br>• E-mail institucional<br>• WhatsApp (urgências)</td>
+<td>• Reuniões: semanal (1h)<br>• E-mail: conforme necessário<br>• WhatsApp: apenas bloqueios críticos</td>
+</tr>
+<tr>
+<td><strong>CEP</strong></td>
+<td>• Plataforma Brasil<br>• E-mail formal</td>
+<td>• Submissões: conforme marcos<br>• Respostas: até 5 dias úteis após solicitação</td>
+</tr>
+<tr>
+<td><strong>Participantes</strong></td>
+<td>• E-mail pessoal<br>• Telefone/WhatsApp (confirmações)</td>
+<td>• Convite inicial: 1 vez<br>• Confirmação: 2 semanas antes<br>• Lembrete: 24h antes<br>• Follow-up (se no-show): 1 vez</td>
+</tr>
+<tr>
+<td><strong>Facilitador/equipe</strong></td>
+<td>• WhatsApp (grupo)<br>• E-mail (formal)<br>• Reunião de treinamento</td>
+<td>• Treinamento: 1 sessão de 2h<br>• Updates: conforme necessário<br>• Debriefing: após cada sessão</td>
+</tr>
+<tr>
+<td><strong>Recrutamento (canais públicos)</strong></td>
+<td>• LinkedIn<br>• Grupos de desenvolvedores (Telegram, Discord)<br>• Comunidades universitárias<br>• Website do experimento (landing page simples)</td>
+<td>• Post inicial + 2 lembretes (intervalos de 1 semana)<br>• Período ativo: 4 semanas</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Templates de comunicação padronizados (ver seção 18.2):</strong></p>
+<ul>
+<li>E-mail de convite</li>
+<li>E-mail de confirmação</li>
+<li>E-mail de lembrete 24h</li>
+<li>E-mail de agradecimento pós-participação</li>
+<li>Status report para orientador</li>
+</ul>
+
+<p><strong>Boas práticas:</strong></p>
+<ul>
+<li><strong>Resposta rápida:</strong> Responder dúvidas de participantes em até 24h</li>
+<li><strong>Clareza:</strong> Linguagem simples, evitar jargões técnicos com participantes</li>
+<li><strong>Profissionalismo:</strong> Tom respeitoso e acolhedor</li>
+<li><strong>Rastreabilidade:</strong> Todas as comunicações formais por e-mail com cópia arquivada</li>
+</ul>
 <h3 id="193pontosdecomunicaoobrigatrios">19.3 Pontos de comunicação obrigatórios</h3>
-<p>Especifique os eventos que exigem comunicação formal (aprovação do plano, mudanças relevantes, adiamentos, cancelamentos).</p>
+
+<p><strong>Comunicações obrigatórias ao orientador:</strong></p>
+<ol>
+<li><strong>Conclusão do protocolo:</strong> Solicitar revisão final antes de submeter ao CEP</li>
+<li><strong>Submissão ao CEP:</strong> Informar data de submissão + anexar documentos</li>
+<li><strong>Parecer do CEP:</strong> Comunicar imediatamente aprovação ou pendências</li>
+<li><strong>Mudanças substanciais:</strong> Qualquer alteração Tipo 2 ou 3 (ver seção 17.3)</li>
+<li><strong>Conclusão do piloto:</strong> Relatório com decisão GO/NO-GO</li>
+<li><strong>Início da execução:</strong> Confirmar data da primeira sessão</li>
+<li><strong>Problemas graves:</strong> Falhas técnicas críticas, desistências em massa, questões éticas</li>
+<li><strong>Conclusão da coleta:</strong> Relatório preliminar de aderência ao protocolo</li>
+</ol>
+
+<p><strong>Comunicações obrigatórias ao CEP:</strong></p>
+<ol>
+<li><strong>Submissão inicial:</strong> Protocolo completo via Plataforma Brasil</li>
+<li><strong>Respostas a pendências:</strong> Dentro do prazo estipulado pelo CEP</li>
+<li><strong>Emendas ao protocolo:</strong> Qualquer mudança substancial aprovada pelo orientador</li>
+<li><strong>Eventos adversos:</strong> Qualquer incidente que afete participantes (desconforto significativo, violação de confidencialidade)</li>
+<li><strong>Conclusão do estudo:</strong> Relatório final conforme exigido pela resolução CNS</li>
+<li><strong>Suspensão ou cancelamento:</strong> Notificação imediata com justificativa</li>
+</ol>
+
+<p><strong>Comunicações obrigatórias aos participantes:</strong></p>
+<ol>
+<li><strong>Convite inicial:</strong> Informações claras sobre elegibilidade, compromisso de tempo, incentivo</li>
+<li><strong>TCLE:</strong> Enviar com pelo menos 48h de antecedência para leitura</li>
+<li><strong>Confirmação de participação:</strong> Data, horário, local, instruções de acesso</li>
+<li><strong>Lembrete 24h antes:</strong> Confirmação final, evitar no-shows</li>
+<li><strong>Mudanças de última hora:</strong> Adiamentos, mudança de local (com máxima antecedência possível)</li>
+<li><strong>Agradecimento pós-participação:</strong> Incluir instruções para receber incentivo</li>
+<li><strong>Disponibilização de resultados:</strong> Após publicação, oferecer acesso ao artigo</li>
+</ol>
+
+<p><strong>Comunicações obrigatórias à comunidade (pós-experimento):</strong></p>
+<ol>
+<li><strong>Publicação de resultados:</strong> Artigo em periódico ou conferência</li>
+<li><strong>Disponibilização de dados:</strong> Dataset anonimizado com DOI</li>
+<li><strong>Materiais de replicação:</strong> Repositório público no GitHub</li>
+</ol>
+
+<p><strong>Gatilhos de comunicação de emergência (imediata):</strong></p>
+<ul>
+<li><strong>Violação de privacidade:</strong> Vazamento de dados identificáveis → CEP + participantes afetados + orientador</li>
+<li><strong>Evento adverso:</strong> Participante passa mal, desconforto extremo → CEP + orientador</li>
+<li><strong>Fraude/má conduta:</strong> Suspeita de código copiado entre participantes durante sessão → orientador + registro formal</li>
+<li><strong>Cancelamento do experimento:</strong> Inviabilidade técnica ou ética → orientador + CEP + participantes já agendados</li>
+</ul>
+
+<p><strong>Registro de comunicações:</strong></p>
+<ul>
+<li>Manter log de todas as comunicações formais (data, destinatário, assunto, anexos)</li>
+<li>Arquivar cópias de e-mails importantes</li>
+<li>Documentar decisões tomadas em reuniões (ata breve)</li>
+</ul>
 <hr>
 <h2 id="20critriosdeprontidoparaexecuodefinitionofready">20. Critérios de prontidão para execução (Definition of Ready)</h2>
 <h3 id="201checklistdeprontidoitensquedevemestarcompletos">20.1 Checklist de prontidão (itens que devem estar completos)</h3>
-<p>Liste os itens que precisam estar finalizados e aprovados (plano, instrumentos, aprovação ética, recursos, comunicação) para autorizar o início da operação.</p>
+
+<p><strong>DEFINITION OF READY - Critérios para iniciar execução experimental</strong></p>
+
+<p><strong>CATEGORIA 1: Aprovações e conformidade</strong></p>
+<ul>
+<li>☐ Protocolo experimental aprovado pelo orientador</li>
+<li>☐ Aprovação formal do CEP recebida (via Plataforma Brasil)</li>
+<li>☐ Eventuais pendências do CEP totalmente resolvidas</li>
+<li>☐ Autorização para uso de laboratório/infraestrutura obtida</li>
+</ul>
+
+<p><strong>CATEGORIA 2: Instrumentos e materiais</strong></p>
+<ul>
+<li>☐ TCLE finalizado e revisado (versão aprovada pelo CEP)</li>
+<li>☐ Questionário pré-experimento validado e testado</li>
+<li>☐ Questionário pós-experimento validado e testado</li>
+<li>☐ Roteiro de entrevista semiestruturada finalizado</li>
+<li>☐ 10 questões LeetCode selecionadas e validadas (3 níveis de dificuldade)</li>
+<li>☐ Casos de teste para cada questão verificados e funcionais</li>
+<li>☐ Guia do participante impresso (30 cópias)</li>
+<li>☐ Cheat sheet de sintaxe disponível em todas as máquinas</li>
+<li>☐ Manual do facilitador completo e revisado</li>
+<li>☐ TCLEs impressos (60 vias - 2 por participante)</li>
+</ul>
+
+<p><strong>CATEGORIA 3: Infraestrutura técnica</strong></p>
+<ul>
+<li>☐ Laboratório reservado para todas as datas de sessões</li>
+<li>☐ 10-15 computadores testados e funcionais</li>
+<li>☐ VSCode instalado e configurado em todas as máquinas</li>
+<li>☐ Python, Java, C++ instalados e testados</li>
+<li>☐ Sistema de submissão funcionando e integrado com Judge0 API</li>
+<li>☐ Créditos suficientes na Judge0 API (~300 submissões)</li>
+<li>☐ Banco de dados configurado para armazenar submissões</li>
+<li>☐ Rede local testada (velocidade, estabilidade, isolamento da internet)</li>
+<li>☐ Backup automático configurado e testado</li>
+<li>☐ Ambiente duplicado/snapshot criado para recuperação rápida</li>
+</ul>
+
+<p><strong>CATEGORIA 4: Piloto e validação</strong></p>
+<ul>
+<li>☐ Piloto executado com 3 participantes</li>
+<li>☐ Problemas identificados no piloto corrigidos</li>
+<li>☐ Timing validado (3 horas suficientes, mas não excessivas)</li>
+<li>☐ Critérios GO/NO-GO do piloto atendidos:
+  <ul>
+    <li>☐ Sistema técnico sem bugs críticos</li>
+    <li>☐ Participantes compreendem instruções sem dificuldade</li>
+    <li>☐ Facilitador consegue conduzir protocolo conforme planejado</li>
+    <li>☐ Coleta de dados funcional (dados salvos corretamente)</li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>CATEGORIA 5: Recrutamento e logística</strong></p>
+<ul>
+<li>☐ Mínimo de 24 participantes confirmados (80% do alvo n=30)</li>
+<li>☐ Participantes distribuídos pelos grupos: ~8 Juniores, ~8 Plenos, ~8 Seniores</li>
+<li>☐ Cronograma de sessões definido e comunicado</li>
+<li>☐ E-mails de confirmação enviados a todos os participantes</li>
+<li>☐ Vales-presente (incentivos) adquiridos</li>
+<li>☐ Transporte/estacionamento comunicado aos participantes (se aplicável)</li>
+</ul>
+
+<p><strong>CATEGORIA 6: Equipe preparada</strong></p>
+<ul>
+<li>☐ Facilitador treinado no protocolo experimental</li>
+<li>☐ Facilitador familiarizado com sistema técnico e troubleshooting básico</li>
+<li>☐ Avaliador de complexidade algorítmica identificado e briefado</li>
+<li>☐ Revisor qualitativo (peer debriefer) confirmado</li>
+<li>☐ Backup de facilitador disponível (em caso de emergência)</li>
+</ul>
+
+<p><strong>CATEGORIA 7: Documentação e registro</strong></p>
+<ul>
+<li>☐ Repositório GitHub configurado e atualizado</li>
+<li>☐ Log de mudanças iniciado</li>
+<li>☐ Templates de comunicação prontos (lembretes, agradecimentos)</li>
+<li>☐ Checklists pré-sessão e pós-sessão impressos</li>
+<li>☐ Formulários de consentimento para entrevista prontos</li>
+</ul>
+
+<p><strong>CATEGORIA 8: Contingências planejadas</strong></p>
+<ul>
+<li>☐ Plano de contingência para problemas técnicos documentado</li>
+<li>☐ Laboratório alternativo identificado (backup)</li>
+<li>☐ Contato de suporte técnico disponível</li>
+<li>☐ Protocolo para no-shows definido (quando substituir participante)</li>
+<li>☐ Procedimento de desistência de participante documentado</li>
+</ul>
+
+<p><strong>CRITÉRIOS MÍNIMOS (OBRIGATÓRIOS):</strong></p>
+<ol>
+<li>✅ Aprovação do CEP</li>
+<li>✅ Piloto bem-sucedido</li>
+<li>✅ ≥24 participantes confirmados</li>
+<li>✅ Infraestrutura técnica funcional</li>
+<li>✅ Facilitador treinado</li>
+</ol>
+
+<p><strong>Se algum critério mínimo não for atendido:</strong> Execução NÃO PODE iniciar. Reunião com orientador para decidir próximos passos.</p>
+
 <h3 id="202aprovaesfinaisparainiciaraoperao">20.2 Aprovações finais para iniciar a operação</h3>
-<p>Indique quem precisa dar o “ok final” (nomes ou cargos) e como esse aceite será registrado antes da execução começar.</p></div>
+
+<p><strong>Processo de GO/NO-GO final:</strong></p>
+
+<p><strong>ETAPA 1: Autoavaliação do pesquisador (48h antes da primeira sessão)</strong></p>
+<ul>
+<li><strong>Responsável:</strong> Pesquisador principal</li>
+<li><strong>Ação:</strong> Preencher checklist completo da seção 20.1</li>
+<li><strong>Registro:</strong> Planilha com status de cada item (✅/❌)</li>
+<li><strong>Critério:</strong> Todos os itens obrigatórios devem estar ✅</li>
+</ul>
+
+<p><strong>ETAPA 2: Reunião GO/NO-GO com orientador (24-48h antes)</strong></p>
+<ul>
+<li><strong>Participantes:</strong> Pesquisador principal + Orientador acadêmico</li>
+<li><strong>Duração:</strong> 30-60 minutos</li>
+<li><strong>Pauta:</strong>
+  <ol>
+    <li>Revisão do checklist de prontidão</li>
+    <li>Discussão de riscos residuais</li>
+    <li>Confirmação de plano de contingência</li>
+    <li>Validação de números de recrutamento</li>
+    <li>Confirmação de aderência ao protocolo aprovado pelo CEP</li>
+  </ol>
+</li>
+<li><strong>Decisão:</strong> GO (prosseguir) ou NO-GO (adiar/revisar)</li>
+<li><strong>Registro:</strong> Ata de reunião assinada por ambos (física ou digital)</li>
+</ul>
+
+<p><strong>ETAPA 3: Confirmação final (12h antes da primeira sessão)</strong></p>
+<ul>
+<li><strong>Responsável:</strong> Pesquisador + Facilitador</li>
+<li><strong>Ações:</strong>
+  <ul>
+    <li>Teste final do ambiente técnico (todas as máquinas)</li>
+    <li>Confirmação de presença dos participantes da primeira sessão</li>
+    <li>Verificação física do laboratório (limpeza, organização)</li>
+    <li>Materiais impressos organizados</li>
+  </ul>
+</li>
+<li><strong>Registro:</strong> Checklist pré-sessão preenchido</li>
+</ul>
+
+<p><strong>AUTORIDADES E APROVADORES:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>Nível de Aprovação</th>
+<th>Responsável</th>
+<th>Pode Vetar?</th>
+<th>Formato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aprovação ética</strong></td>
+<td>Comitê de Ética em Pesquisa (CEP)</td>
+<td>Sim (obrigatório)</td>
+<td>Parecer formal via Plataforma Brasil</td>
+</tr>
+<tr>
+<td><strong>Aprovação metodológica</strong></td>
+<td>Orientador acadêmico</td>
+<td>Sim (fortemente recomendado)</td>
+<td>Ata de reunião GO/NO-GO assinada</td>
+</tr>
+<tr>
+<td><strong>Aprovação técnica</strong></td>
+<td>Pesquisador principal</td>
+<td>Sim (pode adiar por problemas técnicos)</td>
+<td>Checklist de prontidão preenchido</td>
+</tr>
+<tr>
+<td><strong>Aprovação logística</strong></td>
+<td>Coordenação do laboratório</td>
+<td>Sim (pode bloquear acesso)</td>
+<td>E-mail de confirmação de reserva</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>CENÁRIOS DE NO-GO (adiar execução):</strong></p>
+
+<ol>
+<li><strong>CEP ainda pendente:</strong> Adiar até aprovação (não negociável)</li>
+<li><strong>Piloto com problemas graves:</strong> Revisar protocolo, repetir piloto</li>
+<li><strong>Recrutamento insuficiente (<24 participantes):</strong> Estender recrutamento por 2 semanas</li>
+<li><strong>Problemas técnicos críticos:</strong> Adiar até resolução (ex: Judge0 API fora do ar)</li>
+<li><strong>Orientador identifica falha metodológica:</strong> Revisar e corrigir antes de prosseguir</li>
+<li><strong>Facilitador indisponível sem backup:</strong> Reagendar sessões</li>
+</ol>
+
+<p><strong>REGISTRO FORMAL DE APROVAÇÃO:</strong></p>
+
+<p><strong>Documento: "Declaração de Prontidão para Execução"</strong></p>
+<ul>
+<li><strong>Data:</strong> [Data da reunião GO/NO-GO]</li>
+<li><strong>Conteúdo:</strong>
+  <ul>
+    <li>Confirmação de que todos os critérios obrigatórios foram atendidos</li>
+    <li>Listagem de riscos residuais conhecidos e planos de mitigação</li>
+    <li>Data prevista para primeira sessão experimental</li>
+    <li>Assinaturas: Pesquisador principal + Orientador</li>
+  </ul>
+</li>
+<li><strong>Armazenamento:</strong> Repositório GitHub + cópia física arquivada</li>
+</ul>
+
+<p><strong>COMUNICAÇÕES PÓS-APROVAÇÃO:</strong></p>
+<ul>
+<li>E-mail ao orientador confirmando início (registro formal)</li>
+<li>E-mail final de lembrete aos participantes da primeira sessão (24h antes)</li>
+<li>Notificação ao suporte técnico de que sistema entrará em uso</li>
+</ul>
+
+<p><strong>RESPONSABILIDADE FINAL:</strong></p>
+<p>Embora o orientador tenha autoridade de veto, a <strong>responsabilidade última pela execução ética e tecnicamente adequada é do pesquisador principal</strong>. Se o pesquisador identificar qualquer problema após aprovação, deve interromper e consultar orientador imediatamente.</p>
+
+<hr>
+
+<p style="text-align: center; margin-top: 40px;"><strong>FIM DO PROTOCOLO EXPERIMENTAL</strong></p>
+<p style="text-align: center;">Versão 1.0 - Dezembro 2025</p>
+<p style="text-align: center;">Última atualização: 09/12/2025</p>
+
+</div>
