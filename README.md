@@ -2062,6 +2062,248 @@ participantes_randomizados = random.shuffle(lista_participantes)
 </ul>
 <h3 id="113procedimentoexperimentalprotocolovisopassoapasso">11.3 Procedimento experimental (protocolo – visão passo a passo)</h3>
 
+<p><strong>FLUXOGRAMA: OPERACIONALIZAÇÃO DO EXPERIMENTO</strong></p>
+
+<pre><code>
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         INÍCIO DO EXPERIMENTO                           │
+└────────────────────────────────┬────────────────────────────────────────┘
+                                 │
+                                 ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│  ETAPA 1: PREPARAÇÃO (Pesquisador + Orientador)                        │
+│  ───────────────────────────────────────────────────────────────        │
+│  • Selecionar 10 questões LeetCode (3 Easy, 4 Medium, 3 Hard)          │
+│  • Criar casos de teste para validação automática                       │
+│  • Configurar Judge0 API + sistema de submissão                         │
+│  • Preparar instrumentos: TCLE, questionários, roteiro entrevista       │
+│  • Produzir materiais: Guia do Participante, cheat sheets              │
+│                                                                         │
+│  Variáveis definidas: VD (desempenho), VI (senioridade), VCs           │
+│  Stakeholders: Pesquisador, Orientador, Suporte técnico                │
+└────────────────────────────────┬────────────────────────────────────────┘
+                                 │
+                                 ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│  ETAPA 2: APROVAÇÃO ÉTICA (CEP)                                        │
+│  ───────────────────────────────────────────────────────────────        │
+│  • Submeter protocolo ao Comitê de Ética em Pesquisa                   │
+│  • Aguardar parecer (60-90 dias)                                        │
+│  • Responder pendências se necessário                                   │
+│                                                                         │
+│  Instrumento: TCLE aprovado                                             │
+│  Stakeholder: CEP da universidade                                       │
+└────────────────────────────────┬────────────────────────────────────────┘
+                                 │
+                    ┌────────────┴────────────┐
+                    │  Aprovado pelo CEP?     │
+                    └────────────┬────────────┘
+                          NÃO    │    SIM
+                    ┌────────────┘    │
+                    │                 ▼
+                    │    ┌─────────────────────────────────────────────────┐
+                    │    │  ETAPA 3: RECRUTAMENTO (Pesquisador)           │
+                    │    │  ─────────────────────────────────────────────  │
+                    │    │  • Divulgar em: LinkedIn, grupos dev, empresas  │
+                    │    │  • Coletar inscrições via formulário online     │
+                    │    │  • Aplicar critérios inclusão/exclusão          │
+                    │    │  • Estratificar: ~10 Junior, ~10 Pleno, ~10 Sr │
+                    │    │  • Meta: 30 participantes confirmados           │
+                    │    │                                                 │
+                    │    │  Instrumento: Formulário de triagem             │
+                    │    │  Métrica: N participantes por grupo             │
+                    │    └────────────────┬────────────────────────────────┘
+                    │                     │
+                    │                     ▼
+                    │    ┌─────────────────────────────────────────────────┐
+                    │    │  ETAPA 4: PILOTO (Pesquisador + Facilitador)   │
+                    │    │  ─────────────────────────────────────────────  │
+                    │    │  • Executar com 3 participantes voluntários     │
+                    │    │  • Testar: timing, sistema, compreensão         │
+                    │    │  • Identificar bugs e ajustes necessários       │
+                    │    │  • Decisão GO/NO-GO                             │
+                    │    │                                                 │
+                    │    │  Stakeholders: Facilitador, Participantes teste │
+                    │    └────────────────┬────────────────────────────────┘
+                    │                     │
+                    │         ┌───────────┴───────────┐
+                    │         │  Piloto bem-sucedido? │
+                    │         └───────────┬───────────┘
+                    │              NÃO    │    SIM
+                    └──────────────────┬──┘    │
+                         Revisar       │       ▼
+                                       │    ┌──────────────────────────────────────┐
+                                       │    │  ETAPA 5: SESSÃO EXPERIMENTAL        │
+                                       │    │  ──────────────────────────────────  │
+                                       │    │                                      │
+                                       │    │  [T-30min] Preparação Ambiente       │
+                                       │    │  • Facilitador testa computadores    │
+                                       │    │  • Verifica isolamento de rede       │
+                                       │    │  • Distribui materiais impressos     │
+                                       │    │                                      │
+                                       │    │  Instrumento: Checklist pré-sessão   │
+                                       │    └──────────────┬───────────────────────┘
+                                       │                   │
+                                       │                   ▼
+                                       │    ┌──────────────────────────────────────┐
+                                       │    │  [T0] Check-in (15min)               │
+                                       │    │  • Receber participantes             │
+                                       │    │  • Coletar TCLE assinado             │
+                                       │    │  • Atribuir ID anônimo (P001-P030)   │
+                                       │    │                                      │
+                                       │    │  Instrumento: TCLE                   │
+                                       │    │  Variável coletada: ID participante  │
+                                       │    └──────────────┬───────────────────────┘
+                                       │                   │
+                                       │                   ▼
+                                       │    ┌──────────────────────────────────────┐
+                                       │    │  [T+15] Orientação (15min)           │
+                                       │    │  • Facilitador explica protocolo     │
+                                       │    │  • Demonstra sistema submissão       │
+                                       │    │  • Esclarece regras e dúvidas        │
+                                       │    │                                      │
+                                       │    │  Instrumento: Slides + Manual        │
+                                       │    └──────────────┬───────────────────────┘
+                                       │                   │
+                                       │                   ▼
+                                       │    ┌──────────────────────────────────────┐
+                                       │    │  [T+30] Aquecimento (10min)          │
+                                       │    │  • Participante resolve questão fácil│
+                                       │    │  • Pratica submeter código           │
+                                       │    │  • Familiarização com interface      │
+                                       │    └──────────────┬───────────────────────┘
+                                       │                   │
+                                       │                   ▼
+                                       │    ┌──────────────────────────────────────┐
+                                       │    │  [T+40] Questionário Pré (5min)      │
+                                       │    │  • Participante preenche formulário  │
+                                       │    │                                      │
+                                       │    │  Instrumento: Quest. demográfico     │
+                                       │    │  Variáveis: Idade, gênero, formação, │
+                                       │    │   anos_exp, cargo, exp_algoritmos    │
+                                       │    └──────────────┬───────────────────────┘
+                                       │                   │
+                                       │                   ▼
+                                       │    ┌──────────────────────────────────────┐
+                                       │    │  [T+45] EXECUÇÃO PRINCIPAL (180min)  │
+                                       │    │  ──────────────────────────────────  │
+                                       │    │  PARTICIPANTE:                       │
+                                       │    │  • Resolve 10 questões LeetCode      │
+                                       │    │  • Submete soluções (ilimitado)      │
+                                       │    │  • Ordem livre                       │
+                                       │    │                                      │
+                                       │    │  SISTEMA REGISTRA AUTOMATICAMENTE:   │
+                                       │    │  • Timestamp cada submissão          │
+                                       │    │  • Código-fonte                      │
+                                       │    │  • Resultado (aceito/erro)           │
+                                       │    │  • Tempo execução                    │
+                                       │    │                                      │
+                                       │    │  FACILITADOR:                        │
+                                       │    │  • Monitora ambiente                 │
+                                       │    │  • Resolve problemas técnicos        │
+                                       │    │  • Avisa tempo restante (30min, 10min)│
+                                       │    │                                      │
+                                       │    │  VDs COLETADAS:                      │
+                                       │    │  • num_questoes_resolvidas           │
+                                       │    │  • tempo_total, tempo_por_questao    │
+                                       │    │  • num_submissoes, taxa_acerto       │
+                                       │    │  • complexidade_algoritmica          │
+                                       │    │  • qualidade_codigo                  │
+                                       │    └──────────────┬───────────────────────┘
+                                       │                   │
+                                       │                   ▼
+                                       │    ┌──────────────────────────────────────┐
+                                       │    │  [T+225] Questionário Pós (10min)    │
+                                       │    │  • Feedback sobre dificuldade        │
+                                       │    │  • Percepção de relevância           │
+                                       │    │  • Estratégias utilizadas            │
+                                       │    │                                      │
+                                       │    │  Instrumento: Quest. pós-experimento │
+                                       │    │  Variáveis: dificuldade_percebida,   │
+                                       │    │   relevancia_trabalho, fadiga        │
+                                       │    └──────────────┬───────────────────────┘
+                                       │                   │
+                                       │                   ▼
+                                       │    ┌──────────────────────────────────────┐
+                                       │    │  [T+235] Encerramento (5min)         │
+                                       │    │  • Agradecimentos                    │
+                                       │    │  • Entregar vale-presente R$100      │
+                                       │    │  • Convidar para entrevista (opt)    │
+                                       │    └──────────────┬───────────────────────┘
+                                       │                   │
+                                       │                   ▼
+                                       │    ┌──────────────────────────────────────┐
+                                       │    │  [T+240] Backup Dados (30min)        │
+                                       │    │  • Facilitador exporta dados         │
+                                       │    │  • Backup em 2 locais seguros        │
+                                       │    │  • Verificar integridade             │
+                                       │    │  • Preencher formulário observações  │
+                                       │    └──────────────┬───────────────────────┘
+                                       │                   │
+                                       └───────────────────┤
+                                                           ▼
+                                       ┌──────────────────────────────────────────┐
+                                       │  ETAPA 6: ENTREVISTAS (Pesquisador)     │
+                                       │  ──────────────────────────────────────  │
+                                       │  • Selecionar 5-10 participantes         │
+                                       │  • Conduzir entrevista semiestruturada   │
+                                       │  • Gravar áudio (com consentimento)      │
+                                       │  • Transcrever e anonimizar              │
+                                       │                                          │
+                                       │  Instrumento: Roteiro entrevista         │
+                                       │  Dados qualitativos: percepções,         │
+                                       │   estratégias, experiências              │
+                                       └──────────────┬───────────────────────────┘
+                                                      │
+                                                      ▼
+                                       ┌──────────────────────────────────────────┐
+                                       │  ETAPA 7: ANÁLISE (Pesquisador)         │
+                                       │  ──────────────────────────────────────  │
+                                       │  QUANTITATIVA:                           │
+                                       │  • Consolidar dados de todas sessões     │
+                                       │  • Calcular métricas de desempenho       │
+                                       │  • Classificar complexidade (2 avaliadores)│
+                                       │  • Estatísticas descritivas              │
+                                       │  • Testes de hipóteses (ANOVA, post-hoc) │
+                                       │  • Análise de covariáveis (ANCOVA)       │
+                                       │                                          │
+                                       │  QUALITATIVA:                            │
+                                       │  • Codificação temática (Braun & Clarke) │
+                                       │  • Peer debriefing                       │
+                                       │  • Triangulação com dados quantitativos  │
+                                       │                                          │
+                                       │  Ferramentas: Python/R, NVivo            │
+                                       │  Stakeholder: Avaliador externo, Revisor│
+                                       └──────────────┬───────────────────────────┘
+                                                      │
+                                                      ▼
+                                       ┌──────────────────────────────────────────┐
+                                       │  ETAPA 8: INTERPRETAÇÃO E PUBLICAÇÃO     │
+                                       │  ──────────────────────────────────────  │
+                                       │  • Interpretar resultados (Pesquisador)  │
+                                       │  • Validar com orientador                │
+                                       │  • Elaborar artigo científico            │
+                                       │  • Compartilhar resultados com participantes│
+                                       │  • Depositar dados anonimizados (Zenodo) │
+                                       │                                          │
+                                       │  Stakeholders: Orientador, Comunidade    │
+                                       └──────────────┬───────────────────────────┘
+                                                      │
+                                                      ▼
+                                       ┌──────────────────────────────────────────┐
+                                       │            FIM DO EXPERIMENTO            │
+                                       └──────────────────────────────────────────┘
+
+LEGENDA:
+─────────────────────────────────────────────────────────────────────────────
+VI (Variável Independente): Senioridade (Júnior/Pleno/Sênior)
+VD (Variável Dependente): Desempenho (questões resolvidas, tempo, qualidade)
+VCs (Variáveis de Confusão): Anos experiência, formação, exp. prévia algoritmos
+Instrumentos: TCLE, Questionários, Roteiro entrevista, Sistema submissão
+Métricas: Acurácia, Tempo, Complexidade algorítmica, Taxa submissão
+Stakeholders: Pesquisador, Orientador, CEP, Participantes, Facilitador
+</code></pre>
+
 <p><strong>FASE 1 - PRÉ-EXPERIMENTO (Semanas 1-6)</strong></p>
 
 <p><strong>Semana 1-2: Preparação de materiais</strong></p>
